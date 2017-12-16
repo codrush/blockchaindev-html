@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    <script src="/js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>从区块链即服务（baas）到价值互联网 | blockchaindev.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="区块链服务" />
+  
+  
+  
+  
+  <meta name="description" content="信息互联网：是指现如今庞大复杂的信息互联网，目前信息互联网不具备金融属性，通常需要强势的第三方中介提供可信的金融服务，在信息互联网中，技术与业务可通过架构分层来剥离业务和技术的耦合； 价值互联网：是指通过构建一个自带金融属性的互联网络，该网络中第三方中介系统不再是必需的（可以存在），目前来看通过区块链是去实现价值互联网">
+<meta name="keywords" content="区块链服务">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从区块链即服务（BaaS）到价值互联网">
+<meta property="og:url" content="http://blockchaindev.org/conception/from-baas-to-value-internet.html">
+<meta property="og:site_name" content="blockchaindev.org">
+<meta property="og:description" content="信息互联网：是指现如今庞大复杂的信息互联网，目前信息互联网不具备金融属性，通常需要强势的第三方中介提供可信的金融服务，在信息互联网中，技术与业务可通过架构分层来剥离业务和技术的耦合； 价值互联网：是指通过构建一个自带金融属性的互联网络，该网络中第三方中介系统不再是必需的（可以存在），目前来看通过区块链是去实现价值互联网是可行的；区块链通常自带金融系统，且具有排他特性，如果将该金融系统剥离，那么演变">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/p1.png">
+<meta property="og:image" content="http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/p2.png">
+<meta property="og:image" content="http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/p3.png">
+<meta property="og:updated_time" content="2017-12-16T08:36:09.584Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从区块链即服务（BaaS）到价值互联网">
+<meta name="twitter:description" content="信息互联网：是指现如今庞大复杂的信息互联网，目前信息互联网不具备金融属性，通常需要强势的第三方中介提供可信的金融服务，在信息互联网中，技术与业务可通过架构分层来剥离业务和技术的耦合； 价值互联网：是指通过构建一个自带金融属性的互联网络，该网络中第三方中介系统不再是必需的（可以存在），目前来看通过区块链是去实现价值互联网是可行的；区块链通常自带金融系统，且具有排他特性，如果将该金融系统剥离，那么演变">
+<meta name="twitter:image" content="http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/p1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="blockchaindev.org" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/my.css">
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="blockchaindev.org" rel="home"> blockchaindev.org </a>
+            
+          </h1>
+
+          
+            <div class="site-description">一个区块链概念普及、区块链技术分享的专栏</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/Jingxuan013.jpg".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-conception/from-baas-to-value-internet" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      从区块链即服务（BaaS）到价值互联网
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/conception/from-baas-to-value-internet.html" class="article-date">
+	  <time datetime="2017-09-22T15:44:21.000Z" itemprop="datePublished">九月 22, 2017</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>信息互联网：是指现如今庞大复杂的信息互联网，目前信息互联网不具备金融属性，通常需要强势的第三方中介提供可信的金融服务，在信息互联网中，技术与业务可通过架构分层来剥离业务和技术的耦合；</p>
+<p>价值互联网：是指通过构建一个自带金融属性的互联网络，该网络中第三方中介系统不再是必需的（可以存在），目前来看通过区块链是去实现价值互联网是可行的；区块链通常自带金融系统，且具有排他特性，如果将该金融系统剥离，那么演变为经典分布式系统；</p>
+<p>信息互联网下，业务与技术分离的典型产物就是——云计算；</p>
+<p>如今云计算的发展已经渐渐突破这种界限，试图渗透到各个垂直领域提供更好的技术方案，最典型的就是金融云解决方案；</p>
+<p>但是无论哪种金融云解决方案，都有可重复实例化的性质，即，A厂购买F方案，B厂也购买F方案，但他们运行起来之后A-F和B-F是完全两个不同的实例，他们之间一般没有直接关系，也许在第三方中介机构（O）上有那么一点联系，比方说银行或证券公司。</p>
+<p>所以这种情况下也不能称之为价值互联网。</p>
+<p>要达成价值互联网的要求必须是，A-F和B-F可以是同一个实例下的不同子网，他们之间的关联可以是直接的，换句话说，第三方中介O提供的某些服务不再是必需的，比方说支付功能（区块链自带支付系统）；</p>
+<a id="more"></a>
+<p>本文作者：陈浩，元界CTO，Metaverse元界开源项目的创始人之一。<br>元界是一个基于公有区块链技术开发的去中心化平台，致力于提供基于资产登记、数字资产交换、数字身份、价值中介的去中心化服务，创建智能资产价值网络。<br>元界官网：The New Reality Blockchain Project</p>
+<p>本文尝试探讨如何将公有区块链与现有互联网应用相结合；<br>这里的区块链即服务仅指公有区块链，有关区块链的分类可参考：区块链(Blockchain)深入介绍</p>
+<h2 id="一、信息互联网与价值互联网"><a href="#一、信息互联网与价值互联网" class="headerlink" title="一、信息互联网与价值互联网"></a>一、信息互联网与价值互联网</h2><p>信息互联网：是指现如今庞大复杂的信息互联网，目前信息互联网不具备金融属性，通常需要强势的第三方中介提供可信的金融服务，在信息互联网中，技术与业务可通过架构分层来剥离业务和技术的耦合；</p>
+<p>价值互联网：是指通过构建一个自带金融属性的互联网络，该网络中第三方中介系统不再是必需的（可以存在），目前来看通过区块链是去实现价值互联网是可行的；区块链通常自带金融系统，且具有排他特性，如果将该金融系统剥离，那么演变为经典分布式系统；</p>
+<p>信息互联网下，业务与技术分离的典型产物就是——云计算；</p>
+<p>如今云计算的发展已经渐渐突破这种界限，试图渗透到各个垂直领域提供更好的技术方案，最典型的就是金融云解决方案；</p>
+<p>但是无论哪种金融云解决方案，都有可重复实例化的性质，即，A厂购买F方案，B厂也购买F方案，但他们运行起来之后A-F和B-F是完全两个不同的实例，他们之间一般没有直接关系，也许在第三方中介机构（O）上有那么一点联系，比方说银行或证券公司。</p>
+<p>所以这种情况下也不能称之为价值互联网。</p>
+<p>要达成价值互联网的要求必须是，A-F和B-F可以是同一个实例下的不同子网，他们之间的关联可以是直接的，换句话说，第三方中介O提供的某些服务不再是必需的，比方说支付功能（区块链自带支付系统）；</p>
+<h2 id="二、再谈BaaS与BTaaS"><a href="#二、再谈BaaS与BTaaS" class="headerlink" title="二、再谈BaaS与BTaaS"></a>二、再谈BaaS与BTaaS</h2><p>区块链即服务（BaaS） —— Blockchain as a Service<br>区块链技术服务（BTaaS） —— Blockchain Technology as a Service<br>这种分类吸取了云计算领域的PaaS/SaaS的概念；<br><img src="http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/p1.png" alt="p1"></p>
+<p>在上图中我将BTaaS放到和PaaS同一个级别，BaaS放到了SaaS同一个级别；如此分类的原因是，它们有一个最大的共同点是面向的用户是相同的。</p>
+<p>笔者自去年开始关注BaaS这个概念，也撰写了两篇文尝试在公链和联盟链的格局下明确这个概念：《退化的联盟链与BaaS》，《论联盟链局限性与公有链》</p>
+<p>这两篇文主要提出了两个观点：</p>
+<p>第一是联盟链的本质不是技术问题，而是业务建模的问题，这种业务建模往往伴随着设计非合作博弈情况下的均衡问题，能否出现一个演化稳定策略满足系统中所有人成为了联盟链的关键，试图完全依赖只具有拜占庭容错机制的系统肯定是行不通的；</p>
+<p>第二是区块链作为一种特殊的系统，它本身的金融属性是无法剥离的，正因为它的金融特性才使得系统具有生命力，当剥离了它的金融属性，它就会退化成一个单纯的拜占庭容错系统，它本身所能支持的生态也会被大大削弱；</p>
+<p>假设读者赞同以上两个观点，那么我们会有一个结论：</p>
+<p>BaaS 通常是指公有区块链提供的服务，而BTaaS通常就是指使用联盟链提供的服务。</p>
+<p>我们也有如下推论：<br>BaaS所能支持的生态远远大于BTaaS所能支持生态<br>BaaS更接近价值互联网形态的具体形式，BTaaS更接近企业软件解决方案；</p>
+<p>笔者这里正好给BaaS和BTaaS下个定义：</p>
+<p>区块链即服务（BaaS）是指利用公有区块链产生的数据，提供基于区块链的搜索查询、交易提交，数据分析等一系列操作服务，该操作服务集合可能是中心化的，也可以是去中心化的。目前在区块链领域，区块浏览器、数字货币交易平台以及公链衍生应用：存证型-Factom， 数字身份型-uPort 等都可称之为区块链服务。</p>
+<p>区块链技术服务（BTaaS）是指利用区块链技术构建了自己的私有分布式系统，该系统可以认为是经典分布式系统（Raft/Paxos/PBFT）的衍生和强化版本。结合现有云计算技术，可以为开发者和厂商提供平台级的区块链技术服务。</p>
+<p><img src="http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/p2.png" alt="p2"></p>
+<p>上图中展示了BaaS与BTaaS的区别与应用；到这里，读者可以有个疑问，为什么要区分这么清楚？因为这决定了区块链新业务架构模式的走向；</p>
+<h2 id="三、价值互联网（区块链）下的应用创新"><a href="#三、价值互联网（区块链）下的应用创新" class="headerlink" title="三、价值互联网（区块链）下的应用创新"></a>三、价值互联网（区块链）下的应用创新</h2><p>人们有种误区，认为完全去中心化的DAPP才是未来的方向，实际上这是不现实的；</p>
+<p>目前所有的经济系统依赖庞大的银行、证券系统，妄图全部脱离搞自己的经济系统更不现实。</p>
+<p>将区块链作为底层金融基础设施，以BaaS的形式提供不可篡改，公开透明的金融服务应用不失为一个可行的方案；区块链是基础设施，代表着用户渠道，区块链应用是B端业务，是服务提供商，它们承当了价值互联网中的主要角色；</p>
+<p>金融应用分两种，高频使用和低频使用的：</p>
+<p>高频的通常是支付、借贷等功能；低频的通常是撮合交易、期货以及金融衍生品；</p>
+<p>我们将高频使用的功能优先沉淀为区块链基础设施，低频使用的功能可以先以中心化应用（BaaS）的形式提供，逐步过渡到区块链。</p>
+<p>在这个过程中BaaS会一直扮演着主要角色；</p>
+<p>在BaaS下，区块链的商业模式更像是B2B2C的模式，BaaS提供了2B的具体形式，2C则是由区块链本身提供的，因为公链本身就聚集了大量用户；</p>
+<p>而作为机构（B端），提供服务必然收费，中心化也是必然选择，我们其实不必妄图完全地去中心化，区块链在这个过程中更像是发挥了拥有强大的证据链的中介作用，一切B端都会被用户所监督；</p>
+<p>实际上BaaS模式已经在区块链领域逐步显现：大量的数字货币交易平台（P网、B网），各种区块浏览器（blockchain.info）、tokenmaster都是中心化的，但都依然展现了强大的生命力；</p>
+<p><img src="http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/p3.png" alt="p3"></p>
+<p>笔者是Metaverse元界开源项目的创始人之一，图3示意了一个公链展现出来的BaaS，元界按照数字资产、数字身份、价值中介三大主要元素来达成BaaS。</p>
+<p>BaaS可以是元界上的ZenDao项目（<a href="http://zendao.org/），可以是ZenGold项目（http://zengold.org/），可以任何围绕元界作为区块链金融基础设施的项目。所以笔者在公司内部索性划分了一个BaaS开发组" target="_blank" rel="noopener">http://zendao.org/），可以是ZenGold项目（http://zengold.org/），可以任何围绕元界作为区块链金融基础设施的项目。所以笔者在公司内部索性划分了一个BaaS开发组</a></p>
+<p>所以任何围绕公链，以BaaS提供服务的应用，都是价值互联网下的应用创新。</p>
+<h2 id="四、再谈公链链发展区块链的系统性风险"><a href="#四、再谈公链链发展区块链的系统性风险" class="headerlink" title="四、再谈公链链发展区块链的系统性风险"></a>四、再谈公链链发展区块链的系统性风险</h2><p>这个问题尤为被大家关心，其实这也是一个接受的过程。</p>
+<p>比方很多人诟病PoW挖矿浪费能源不环保，这个问题和电动汽车的问题有点像，属于能源结构的问题，不是PoW本身的问题。</p>
+<p>比方说银行金库消耗的材料不也是重工业制造的吗？重工业同样消耗大量能源。</p>
+<p>任何公链还面临了一个系统性风险，即拜占庭容错阈值被突破的风险；</p>
+<p>其实这个问题算是犯了区块链初学者的毛病，只指看到了技术上的共识，而看不到社区共识，其实在现实社会中，社区共识往往会发挥比技术共识还要大的力量，这种系统性风险往往还是归结到社区共识上，社区共识在某种程度上会监督所有行为。</p>
+<h3 id="身份问题"><a href="#身份问题" class="headerlink" title="身份问题"></a>身份问题</h3><p>这两天有个热门问题《什么样的用户不喜欢微信？》</p>
+<p>目前大家还停留在查地址，查交易的阶段，未来的区块链一定是带身份的，而且是用户自己控制自己完全拥有的身份机制，比方说元界的数字身份就是就有非常好的设计来解决大部分互联网身份难题（嗯，虽然我还没发布元界数字身份白皮书，也只能厚着脸皮了，囧逃。。。）</p>
+<h3 id="数据隐私"><a href="#数据隐私" class="headerlink" title="数据隐私"></a>数据隐私</h3><p>这个问题其实可以归结到身份问题底下，但有时候是单纯的数据隐私，未必是身份的，所以我也预感未来会成为一个热门研究方向。</p>
+<p>在这个问题下，其实还有一个零知识证明的问题，在区块领域有两个币种（Zcash\ZCoin）t提供了绝佳的支付隐私案例，但是我认为零知识证明的绝佳应用不是支付，而是数字身份；</p>
+<h3 id="链下数据导入链上"><a href="#链下数据导入链上" class="headerlink" title="链下数据导入链上"></a>链下数据导入链上</h3><p>链下数据导入链上的前提是解决数据隐私，其次是身份问题，最后才是应用问题；</p>
+<p>这个问题其实会在其他问题慢慢解决后自然解决了，它本身是一个结果，而不会成为区块链的主要技术问题；</p>
+<h3 id="产品形态"><a href="#产品形态" class="headerlink" title="产品形态"></a>产品形态</h3><p>区块链产品的核心竞争力将是围绕核心钱包优化出来的新型应用；<br>BaaS目前将是提供区块链产品的最有竞争力的形式，可以无缝的衔接到互联网应用上；</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/概念/">概念</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链服务/">区块链服务</a></li></ul>
+
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: '打赏支持', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/alipay-ch.png',
+  alipayImage: 'http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/wechat-ch.png'
+});
+</script>
+      
+            
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/interview/what-should-CTO-think-on-blockcain.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          巴比特采访-区块链的CTO需要思考什么?
+        
+      </div>
+    </a>
+  
+  
+    <a href="/conception/conceptions-on-BAAS.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">谈谈对区块链服务（BaaS）的理解</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、信息互联网与价值互联网"><span class="nav-number">1.</span> <span class="nav-text">一、信息互联网与价值互联网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、再谈BaaS与BTaaS"><span class="nav-number">2.</span> <span class="nav-text">二、再谈BaaS与BTaaS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、价值互联网（区块链）下的应用创新"><span class="nav-number">3.</span> <span class="nav-text">三、价值互联网（区块链）下的应用创新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、再谈公链链发展区块链的系统性风险"><span class="nav-number">4.</span> <span class="nav-text">四、再谈公链链发展区块链的系统性风险</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#身份问题"><span class="nav-number">4.1.</span> <span class="nav-text">身份问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据隐私"><span class="nav-number">4.2.</span> <span class="nav-text">数据隐私</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链下数据导入链上"><span class="nav-number">4.3.</span> <span class="nav-text">链下数据导入链上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#产品形态"><span class="nav-number">4.4.</span> <span class="nav-text">产品形态</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 blockchaindev.org All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        The New Reality <a href="https://mvs.org" target="_blank">Metaverse</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+<script src="/js/my.js"></script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
