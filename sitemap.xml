@@ -30,20 +30,6 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/02-bitcoin-and-byzantine-issue.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blockchaindev.org/archives/07-build-digital-asset-exchange.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
@@ -58,14 +44,28 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/09-bitcoin-serialize-class-CDataStream.html</loc>
+    <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/05-opensource-blockchain-project.html</loc>
+    <loc>http://blockchaindev.org/archives/02-bitcoin-and-byzantine-issue.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/10-from-Paxos-to-PBFT.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/04-build-your-own-blockchain.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
@@ -86,14 +86,14 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/conception/conceptions-on-BAAS.html</loc>
+    <loc>http://blockchaindev.org/archives/13-development-in-blockchain.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/13-development-in-blockchain.html</loc>
+    <loc>http://blockchaindev.org/conception/conceptions-on-BAAS.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
@@ -107,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/04-build-your-own-blockchain.html</loc>
+    <loc>http://blockchaindev.org/archives/05-opensource-blockchain-project.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
@@ -121,7 +121,7 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/10-from-Paxos-to-PBFT.html</loc>
+    <loc>http://blockchaindev.org/archives/09-bitcoin-serialize-class-CDataStream.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
