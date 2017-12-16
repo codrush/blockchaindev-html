@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    <script src="/js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>货币的一种互联网体系架构 | blockchaindev.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="区块链 入门" />
+  
+  
+  
+  
+  <meta name="description" content="介绍中本聪最伟大的发明比特币，可以因为以下两处不同的特征广受赞誉： 比特币是公开的，去中心化的，加密总账（cryptographic ledger），同时拥有基本总账能力。加密总账能追踪新的比特币的余额。以比特币为基础的平行金融体系正在被着力打造当中。加密总账在灵活性上的便利开发诸多。例如多重签名账户，去中心化兑汇，机">
+<meta name="keywords" content="区块链 入门">
+<meta property="og:type" content="article">
+<meta property="og:title" content="货币的一种互联网体系架构">
+<meta property="og:url" content="http://blockchaindev.org/archives/03-architecture-of-value-internet.html">
+<meta property="og:site_name" content="blockchaindev.org">
+<meta property="og:description" content="介绍中本聪最伟大的发明比特币，可以因为以下两处不同的特征广受赞誉： 比特币是公开的，去中心化的，加密总账（cryptographic ledger），同时拥有基本总账能力。加密总账能追踪新的比特币的余额。以比特币为基础的平行金融体系正在被着力打造当中。加密总账在灵活性上的便利开发诸多。例如多重签名账户，去中心化兑汇，机器间交易的新应用，而这些成为了开发的驱动力。这一论文分析加密总账在目前金融体系中">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-16T07:35:20.922Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="货币的一种互联网体系架构">
+<meta name="twitter:description" content="介绍中本聪最伟大的发明比特币，可以因为以下两处不同的特征广受赞誉： 比特币是公开的，去中心化的，加密总账（cryptographic ledger），同时拥有基本总账能力。加密总账能追踪新的比特币的余额。以比特币为基础的平行金融体系正在被着力打造当中。加密总账在灵活性上的便利开发诸多。例如多重签名账户，去中心化兑汇，机器间交易的新应用，而这些成为了开发的驱动力。这一论文分析加密总账在目前金融体系中">
+  
+    <link rel="alternate" href="/atom.xml" title="blockchaindev.org" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/my.css">
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="blockchaindev.org" rel="home"> blockchaindev.org </a>
+            
+          </h1>
+
+          
+            <div class="site-description">一个区块链概念普及、区块链技术分享的专栏</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/Jingxuan013.jpg".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-archives/03-architecture-of-value-internet" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      货币的一种互联网体系架构
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/03-architecture-of-value-internet.html" class="article-date">
+	  <time datetime="2015-12-19T13:04:11.000Z" itemprop="datePublished">十二月 19, 2015</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>中本聪最伟大的发明比特币，可以因为以下两处不同的特征广受赞誉：</p>
+<p>比特币是公开的，去中心化的，加密总账（cryptographic ledger），同时拥有基本总账能力。<br>加密总账能追踪新的比特币的余额。<br>以比特币为基础的平行金融体系正在被着力打造当中。加密总账在灵活性上的便利开发诸多。例如多重签名账户，去中心化兑汇，机器间交易的新应用，而这些成为了开发的驱动力。这一论文分析加密总账在目前金融体系中的应用，同时促进对一下内容的讨论：<br>如果金融机构利用公共加密去中心化总账，同时有基本总账能力，当他们检测资产负债余额情况时，哪些速度、成本、灵活性上面的优势可以达成？</p>
+<p>这些总账给实时全额结算系统（Real Time Gross Settlement）例如CHAPS和FedWire的构建带来了新的方式，同时还有延迟净额清算系统（Deferred Net Settlement）例如ACH，Bacs和对应银行，外汇交易市场，股票交易市场和其他金融体系的支柱。这篇文章把这些去中心化的元素压缩进一个基于层级的连续框架，同时称它为：货币的一种互联网体系架构</p>
+<p>货币的一种互联网体系架构带来的可感知好处将会随着对系统的介绍一同枚举。这些好处是邀约的动机。</p>
+<a id="more"></a>
+<p>作者：Meher Roy<br>翻译&amp;校对：初夏虎，沈至慧，陈浩<br><a href="https://docs.google.com/document/d/1Bc-kZXROTeMzG6AvH7rrTrUy24UwHoEcgiL7ALHMO0A/pub" target="_blank" rel="noopener">原文地址</a> 请自备梯子。</p>
+<h1 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h1><p>中本聪最伟大的发明比特币，可以因为以下两处不同的特征广受赞誉：</p>
+<p>比特币是公开的，去中心化的，加密总账（cryptographic ledger），同时拥有基本总账能力。<br>加密总账能追踪新的比特币的余额。<br>以比特币为基础的平行金融体系正在被着力打造当中。加密总账在灵活性上的便利开发诸多。例如多重签名账户，去中心化兑汇，机器间交易的新应用，而这些成为了开发的驱动力。这一论文分析加密总账在目前金融体系中的应用，同时促进对一下内容的讨论：<br>如果金融机构利用公共加密去中心化总账，同时有基本总账能力，当他们检测资产负债余额情况时，哪些速度、成本、灵活性上面的优势可以达成？</p>
+<p>这些总账给实时全额结算系统（Real Time Gross Settlement）例如CHAPS和FedWire的构建带来了新的方式，同时还有延迟净额清算系统（Deferred Net Settlement）例如ACH，Bacs和对应银行，外汇交易市场，股票交易市场和其他金融体系的支柱。这篇文章把这些去中心化的元素压缩进一个基于层级的连续框架，同时称它为：货币的一种互联网体系架构</p>
+<p>货币的一种互联网体系架构带来的可感知好处将会随着对系统的介绍一同枚举。这些好处是邀约的动机。</p>
+<h1 id="缩写和定义"><a href="#缩写和定义" class="headerlink" title="缩写和定义"></a>缩写和定义</h1><ul>
+<li>ACH：自动清算系统，确保美国基于延迟净额清算基础的零售支付过程可行的系统。</li>
+<li>Bacs：确保英国基于延迟净额清算基础的零售支付过程可行的系统</li>
+<li>CHAPS：英国用来实施高价值交易的基础全额结算基金交易系统</li>
+<li>Consensus Pool：一组服务器，拥有给定的主人，使用容错算法来持续达到共识状态的总账。健康的共识池（consensus pool）一般由不同对手方控制若果服务器。</li>
+<li>DApp：去中心化应用</li>
+<li>DE：去中心化交易</li>
+<li>DEP：去中心化交易协议(protocol)，在7a部分有描述</li>
+<li>DNS：延迟净额清算</li>
+<li>DNSP：延迟净额清算协议，在7d部分有描述</li>
+<li>FedWire：美国用来实施高价值交易的基础全额结算基金交易系统</li>
+<li>Issuer：在加密总账上发放财产的对手方。这一对手方可以是一家银行，公司，去中心化的匿名机构，政府或者私人个体。财产可以是商品保障代币，货币，情报类货物，公司内部股权，代表航空里程的代币。</li>
+<li>Ledger contracting：请在3,4小节找到释义</li>
+<li>ODFI：初始存储金融机构，一家创立自动清算贷款的银行。</li>
+<li>OFI：初始金融机构，一家创立FedWire贷款的银行。</li>
+<li>RDFI：存储接受金融机构，一个结束ACH贷款的银行。</li>
+<li>RFI：接受金融机构，一家结束FedWire贷款的银行。</li>
+<li>RTGS：实时全额结算系统。</li>
+<li>GTGSP：实时全额结算系统协议，在7c中有描述。</li>
+<li>SIPS：重要支付系统。</li>
+<li>SL3P：静态流动性支付过程协议，在7b中有描述</li>
+<li>Tx：交易</li>
+</ul>
+<h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><p>由OSI层模型得到启发货币互联网构架按图一(Figure 1)进行：<br>p1</p>
+<p>接下来的部分详述每一层的需求和能力，论文和划分为以下分段：</p>
+<ul>
+<li>4,5节描述了总账协议，由比特币和以太坊项目概念升级引领的创新。总账协议给此文多重组成建造了基础。在4小节对比特币的描述中，尽管在抽象有利情况下来看是正确的，但又与目前的实现有所偏离。</li>
+<li>6,12,13小节讨论总账层，6小节做了整体假设，省略了理由。理由和详述在12小节。13小节的目的写在5小节。</li>
+<li>7a，7b，7c和7d描述了DEP，SL3P，RTGSP和DNSP。这一段阐述了货币互联网的潜在核心创新。</li>
+<li>8小节展示了7小节中的协议可以统一成两个基本的总账运行。这一联合使得实现易于处理。</li>
+<li>9,10和11小节分别介绍了寻找的目标，协议一节程序层。</li>
+<li>14小节展示了重要的观察和开发问题。<br>参考文献在15小节，作者详细情况在16小节。</li>
+</ul>
+<p>最后，便签颜色编码（本文是翻译文，不参照下述）：</p>
+<ul>
+<li>深蓝色粗体 字体用于部分的标题。</li>
+<li>天蓝色粗体字体用于分节标题。</li>
+<li>绿色加粗字体demarate多相支付和交换协议阶段。</li>
+<li>灰色加粗字体标出重要的定义，意见或段落。</li>
+<li>文章详细介绍其他颜色和形状公约，以备不时之需。</li>
+</ul>
+<h1 id="比特币的总账合约"><a href="#比特币的总账合约" class="headerlink" title="比特币的总账合约"></a>比特币的总账合约</h1><p>总账协议是追踪价值余额账户的协议。它们允许客户在自己账户里减去X单元，同时在另一个账户里计入X单元。为了达成一个重要的运作，客户的账户必须有超过X的余额。图一形象化了两个花旗银行客户，Alice和Bob。Alice创立了这个支付。<br>p2</p>
+<p>在上图的运行中，比特币通过总账协议增加了财富。总账协议是保持余额的账户在预定规则下运作。比特币外部的实体，像Alice和Bob，在完成规则集(rule sets)前不能用总账协议来缔约。这一实施因为违背协议规则拒绝比特币节点来进行。</p>
+<p>例如，Alice想要把比特币转给Bob，同时Bob只能在15年12月31日后使用比特币。创立一个保持比特币暂时余额的总账协议(ledger contract)就能进行。对Bob的转账，在总账协议中设置给定日期后才能获得比特币。图三展示了这个流程：<br>p3</p>
+<p>总账协议可以被认为是中立的，自动的第三方，调停Alice和Bob之间的转账关系。读者需要知道上面的图是一个抽象 (abstract ) 概念，比特币可以不同方式地来实施交易。<br>p4</p>
+<p>图四提供了第二个注释。Alice是一个买家，Bob是一个卖家。货物交易有个很长的运输时间。Trent是同时被Alice和Bob信任的第三方。在这一买卖中，Alice把买物价值存在总账协议，按以下条约：</p>
+<ul>
+<li>三方中任意两个必须签约保证协议资金不能动。</li>
+<li>如果货品错误接受，Alice和Trent能把资金给回Alice。</li>
+<li>销售顺利结束，Bob和Trent把支付款项给到Bob。</li>
+</ul>
+<p>图四展示了成功销售交货时候的交易流程。总账协议就像一个中立的自动第三方调停Alice，Bob和Trent直接的交易关系。</p>
+<p>比特币总账协议由堆栈为基础的（stack-based）字节代码(bytecode)语言编程，我们叫它为“Bitcoin script”。每个总账协议都有代码和缓存数据结构。<br>比特币协议系统有两个重要的限制：</p>
+<ul>
+<li>价值盲区(value-blindness)：协议不能执行比总共存储在内的资金金额低的交易。也就是说检索时间内应用人要一次提出所有资金。</li>
+<li>缺少持久储存/状态：协议不能存储数据，这限制应用人不能做去中心化交易。</li>
+</ul>
+<p>图五展示了强调限制的假设情况。Alice想用总账协议把比特币换成狗狗币。她建立了一个总账协议，并规定用比特币来交易。条约为：当对方给Alice的地址提供了狗狗币支付证明(payment proof)，协议会把比特币给到对方指定的地址。</p>
+<p>价值盲区限制指Bob作为另一方，必须交易Alice在协议里实际指定的数额。对方可能希望一个较小的交易量，然后得到总账协议里相应部分的资金。这一操作在单比特币总账协议中无法进行。</p>
+<p>假设部分交易可行，比特币总账协议必须存储能使用的支付凭证。当这一存储流失，对方能重复提供同样的凭证，不公平地提尽资金。无法存储和价值盲区限制了去中心化交易等程序。</p>
+<p>目前的例子仅为了强调限制。它有其他未被提及的瑕疵。去中心化交易比特币在另一个结构——原子交叉链交易(Atomic Cross Chain Trrade)中，可以更好地实施。尽管它也有价值盲区限制。</p>
+<p>下一个小节强调的是简介的以太坊方式，为此中描述的协议奠定了基础。</p>
+<h1 id="含有以太坊的总账合约"><a href="#含有以太坊的总账合约" class="headerlink" title="含有以太坊的总账合约"></a>含有以太坊的总账合约</h1><p>以太坊项目含有许多创新，其中以下几个对本文很重要：</p>
+<p>a. 总账协议是有价值意识(value-aware)，拥有持久存储能力。<br>b. 总账协议在需要的时候能存入/提取(loaded/unloaded)资金。存入/提取条件由协议代码(contract code)执行。<br>c. 有数据的消息可以传送到总账协议。协议能用数据回复，把价值传到输入处。</p>
+<p>7小节对以上的使用进行了演示。因此此处举例省略。其他以太坊创新对我们的讨论是次要的，将在12小节提到</p>
+<p>a. 总账协议能进入一些随机数据。目的是为投机应用提供熵源(entropy source)<br>b. 用来创立总账协议的改编语言是图灵机完成的。<br>c. 总账协议能创立另一个总账协议。因此，与外部人控制账户有同样的权限。这是指“联系第一阶级市民的财富”(contract first class citizen property)</p>
+<p>b，c两点的连结意味着在升级以太坊总账时可能会产生无限循环情况(loops)。在估计任意脚本在有限时间内终止或者阻止网络节点拒绝交易导致无限循环时，Halting问题提供了一个限制。当一个程序为了防止节点拒接交易而陷入死循环时，Halting问题对此进行判断之后创新引发的风险有两个：</p>
+<p>阻止无限循环的交易费用法在某些未知情况下是有缺陷的。<br>明确设计的恶意协议代码能从以太坊虚拟机中逃逸并引发网络节点损坏。</p>
+<p>12小节讨论了防范风险的方式，同时还能得到以太坊的若干好处。驱动力是在邀约实施孵化期避免风险和复杂性。</p>
+<p>6-10小节假设以太坊总账协议能力的完整集是有效的。</p>
+<h1 id="总账层"><a href="#总账层" class="headerlink" title="总账层"></a>总账层</h1><p>总账层是用一个允许单一或一组对手方得以建立总账同时流出需求资产的协议来创造的。每一个总账都有个资产发行人，一群总账身份证明和资产发行的身份证明。<br>总账的最低准则为：</p>
+<p>每个总账的资产发行人为了维护总账必须是不同实体(entities)。<br>总账是由一个去中心化的共识过程(consensus process)来维护的。参与共识过程的节点集被称为共识池。<br>总账账户余额(balance)，协议和交易是公开的。<br>交易由数字签名的使用来初始创立。<br>多重签名账户是个基本的需求。<br>基础的总账协议能力在每个总账中都是需要的。最小能力集会在12小节详细描述。<br>快速的总账交易最好在两秒内完成全部的确认。当共识池节点身份已知，这对于去中心化总账是可以完成的。我们假设随后阐述也是同样情况。<br>共识池和联合总账会有一次对准机制。</p>
+<p>11小节提供了上述特性的理由。超总账确立了通过实际拜占庭容错（Practical Byzantine Fault Tolerance）共识算法来维护总账，同时，也是总账层协议的一个例子。</p>
+<p>比特币和以太坊项目假设网络节点是匿名的。这里，我们假设共识池节点的身份(identify)是可知的。这是与其他加密货币项目的主要分歧(divergence)之一。除此之外，聚焦是筹谋金融系统与商品保障货币，像比特币这样的信息化商品，股权和其他资产的相互协调。最终，邀约的系统并不一定要创造任何新的货币或者资产。</p>
+<p>图片六显示了总账层(ledger layer)的部分。有同样财产种类的总账有一样的颜色。彩色圆内的黑点代表一个账户。账户对应的资产发行人是已知的。发行人的名字选来方便形象化。大银行和企业，自然又适当的保守的代笔，并非是此处描述的科技的首批客人。</p>
+<p>如果carol在总账4里有财产，我们假设她与总账4发行人间有可信任的关系。</p>
+<p>在Alice的案例中，她在总账1里有美元，想要把美元转给Bob，一个有相同总账相同发行人客人，也就是说，总账内转账是处理起来比较简单的。下一个小节会介绍总账内转账。</p>
+<h1 id="支付和交易层"><a href="#支付和交易层" class="headerlink" title="支付和交易层"></a>支付和交易层</h1><p>这一层被分配解决Alice和Bob案例中的两种情况：</p>
+<p>情况1：Alice有花旗银行发行在总账1里的V美元，她想要兑成总账2的Bob手里的W欧元。Fidor银行是欧元发行人。7a描述了这个情况。<br>情况2：Alice有花旗银行在总账1里发行的V美元，想要支付给Bob。Bob是富国银行总账2的客人。7b，7c和7d展示了决议。<br>这层在开展四个协议（protocols）中的一个起作用。7a和DEP有关，7b和SL3P有关，7c和RTGSP有关，7d和DNSP有关。微交易支付(micro-transaction payments)在附录A中可以参考。</p>
+<p>7a.DEP</p>
+<p>去中心化交易可以作为两个调停交易关系的连锁总账协议来实施。在图7a，7b，7c和7d中提供了可视情况。为了方便，我们把两个协议命名为发布协议(dispensing contract)以及接受协议(accepting contract)。协议有四个阶段，假设Alice创立了一份Bob接受作为交易方的邀约：</p>
+<p>阶段一：Alice在两个总账建立发布协议以及接受协议</p>
+<p>图7a代表阶段一<br>Alice在总账2建立接受协议，在总账1建立发布协议<br>发布以及接受协议的连结构成了Alice交易邀约(offer)。定价信息被设定为两个协议的存储入口。<br>Alice负担价值V的发布协议<br>接受以及发布协议的内容见下图</p>
+<p>p5 </p>
+<p>阶段二：Bob相信接受协议，然后问发布协议要钱</p>
+<p>图7b形象化了阶段二<br>Bob确认发布及接受协议构成了一个可接受的邀约并且架构正确。<br>接受协议保存资金的状态是Alice需要阶段三c的声明消息来提取它们。<br>Bob提供目前阶段在总账1的发布协议的支付凭证</p>
+<p>p6</p>
+<p>阶段三：发布协议给Bob放款并给Alice声明消息</p>
+<p>图片7c画出了阶段三的情况<br>发布协议确认支付凭证同时确保凭证之前未被使用。完成后给总账1的Bob转V，并为协议内存添加支付凭证。<br>发布协议给总账1的Alice发送提现消息(claim message)。在Alice方便或者立刻就能在接收协议提款</p>
+<p>p7</p>
+<p>阶段四：Alice用声明消息从接收协议里提款</p>
+<p>图7d代表了阶段四<br>Alice在接收协议里施加声明消息<br>接收协议核实声明消息，同时确保声明消息之前未被使用。<br>如果声明消息有效，接收协议给Alice在总账2放款，同时在存储(storage)中添加声明消息的数据。</p>
+<p>p8</p>
+<p>接收与发布协议的能力</p>
+<p>发布协议必须在第三方持有V，同时能够验证总账2的支付凭证。为防止重复使用，使用信息需要被存储。<br>接收协议必须在第三方放置W，同时能够验证总账1的声明消息。为了防止重复使用，用过的声明消息需要被写入合同内存。</p>
+<p>上述流程假设交易是自动的，也就是说，发布协议里的V仅在一个交易里被声明。如果Bob在阶段二中想要把交易额改成小于W的X也是可以的。</p>
+<p>此外，还有两个要考虑的边缘情况：</p>
+<p>1.发布协议未余额：因为对阶段二中把资产转到接受协议时参与方人数没有限制，因此可能发生Bob在要钱的时候没有达到发布协议余额条件。为了防止Bob的损失，需要加入一个额外的功能，给Bob在总账1发送消息“交易被拒”Bob可以用拒信在总账2提款。Alice不会受到拒信，因此她不能解锁总账2里面的资产。<br>2.Alice取消命令：Alice必须拥有提取和添加发布协议资金的能力，同时也能撤销命令。这一能力不能接入之前提起的交易流程。提款引发的非余额能用之前说起的拒信来处理。<br>尽管DEP不可靠又是P2P的，但是信息服务商追踪不同总账的交易命令依然有市场。服务商可以让共识池节点提供命令，核实总账协议合理。参与方会给服务商酬劳来获得更新的信息。纯信息化服务是与命令相当的货币互联网。</p>
+<p>DEP的强大在于它消除不同对手方间的对调停货币，股权交易的需要，图8a展示了对手方以及Alice与Bob间有股权交易时的关系。图8b，SEP与8a进行了对比，强调了潜在低成本的交易。一个相似平行情况在货币交易时存在。</p>
+<p>中央存管处和保管处的作用被公共加密总账替代。经纪人和股票交易被跟踪总账命令的信息服务所代替。当Alice和Bob对对方风险无法容忍是，清算所就不被需要。协议执行只花了Bob4秒时间。</p>
+<p>p9 </p>
+<p>最终，DEP像一座联系货币和信息化商品，例如以太和比特币，的桥梁。</p>
+<p>7b.SL3P</p>
+<p>不像去中心化交易那样是目前系统的发展性进步，SL3P是一个新的支付过程。</p>
+<p>想象图9a的情况，Alice有花旗银行发布的在总账1上的V美元，她想要把这些钱给Bob。Bob是国富银行在总账2的客人。又有一个叫Carol的，与Alice和Bob有关的对手方，它在两个总账都保持余额。Carol：</p>
+<p>相信花旗银行和国富银行两个发行方。<br>对两个总账的各自余额保持中立，只要总量保持恒定。<br>在国富银行持有超过V美元的资产<br>不需要立刻做两个总账之间的交易，也就是说，她的余额是静态现金流(static liquidity)的</p>
+<p>p10</p>
+<p>根据交易集，图9b描述的协议，解决了支付：</p>
+<p>Alice在总账1给Carol V美元<br>Carol在总账2给Bob V美元</p>
+<p>p11</p>
+<p>SL3P利用两个总账协议来保证多重需要满足交易逻辑的特性：</p>
+<p>Alice发给Carol的总账协议确保她在总账2支付Bob，或者她在总账1收回她的钱。<br>总账协议可以保持，也就是说，Carol构造一次协议，然后协议自动在不同对手方进行支付。<br>Carol为了保证静态现金流动性可以在支付时候收费。<br>协议需要四个阶段：</p>
+<p>阶段一：Carol通过创立在两个总账的协议开了个SL3P通道(channel)。</p>
+<p>图10a代表阶段1<br>Carol在总账1创立SL3P协议1，在总账2创立SL3P协议2。<br>对称的SL3P协议1以及SL3P协议2的连结叫做SL3P通道。协议存储了作为数据入口的每次交易收费情况。<br>Carol现在值X的协议1以及值Y的协议2<br>SL3P协议的能力如下</p>
+<p>p12</p>
+<p>阶段二：Alice相信SL3P协议1，在SL3P协议2问Bob要钱</p>
+<p>图10b显示了阶段二<br>Alice想支付给Bob V，同时核实SL3P协议2拥有一个超过V的余额（balance）。若是，她进入下一步<br>Alice把V美元转到SL3P协议1<br>SL3P协议1以特殊状态持有资金。这些资金只有在阶段四后才能被提出来，或者SL3P协议2在阶段三d不给Bob钱<br>Alice为上述情况提供证明给了SL3P协议2，并且创立一个给Bob总账2的账户的转账。</p>
+<p>p13</p>
+<p>阶段三：SL3P协议2核实声明，给Bob打钱</p>
+<p>图10c描述了阶段三<br>SL3P协议2核实支付凭证然后检查了它之前是否有被用过。核实无误后，它给Bob转账V，给Carol在总账2发状态改变消息。支付证明数据添加在协议存储中。<br>Carol能用状态改变消息来把SL3P协议1里的资金存在阶段二c，她随时可提。<br>如果余额不满足，协议在总账2发送“拒绝支付”消息给Alice。Alice能用就行从SL3P协议1提钱。<br>Bob在协议里只需要核实成功转账</p>
+<p>p14</p>
+<p>阶段四：Carol用状态消息提钱</p>
+<p>Carol从之前的SL3P协议1里拿出状态改变消息<br>SL3P协议1核实状态改变消息，把消息存在之前重复使用的记忆里，然后使得V之后可以被Carol提出。<br>只有Carol之后能在SL3P提出来的钱参与了。Carol能把阶段三委托给第三方。第三方监管SL3P协议然后确保他们能够在静态现金流动性中有足够的参与。</p>
+<p>p15</p>
+<p><strong>SL3P协议的能力</strong></p>
+<p>SL3P协议需要在第三方保持余额，同时能够核实支付凭证，状态变更消息。已经使用的凭证和学校需要被保存在记忆存储中来防止重复使用。<br>在发生不余额状态时的SL3P支付，目标协议必须发布一个“支付被拒”消息给创立者。支付被拒消息能让另一个协议能提出款项。<br>SL3P协议必须允许Carol在没有违背协议条件是存取款。Carol手里两个协议都达到余额，钱全部被提出来了，通道也就结束了。</p>
+<p>协议逆袭也可行。因为SL3P协议是对称的，Dave能够创立一个支付，从总账2到总账1.</p>
+<p>支付过程被修改成了P2P模式，为竞争市场提供基础。协议是两次转账协议计算的连结，因此能在4秒内完成。</p>
+<p>国内相应的银行能被可视化成Carol，作为两个接入发行人之一。比如，假设总账1的发行人是发行人1,。如果发行人 、1在SL3P渠道总账2开设存款，导致的是一个与之对应的国内银行的关系。读者应该能够记住国内相应银行正不断加速对时代错误的解决。</p>
+<p>SL3P提升了递延净结算（Deferred Net Settlements）因为发行者没有假设支付过程中的信任风险。为了减缓递延净结算中的信任风险，发行者需要给清算所抵押。SL3P提出没有这个必要性。</p>
+<p>另一个关键优势是创立新的支付过程流动性池。流动性成本是给RTGS支付定价的决定性因素。一个目前系统中的核心假设是支付过程中的流动性需求是由发布者提供的。SL3P能够打破这个假设，建立一个更大的流动性池，也因此得到更实惠的支付。</p>
+<pre><code>7C。即时支付结算协议（RTGSP）
+</code></pre><p>与SL3P相似，RTGSP解决了这一问题：Alice拥有花旗银行在总账1里的V美元，想要把这些钱转给Bob。Bob是国富银行在总账2的客人。 RTGSP和美国用来进行高价值(high value)转账的FedWire系统的邀约共识。它允许涉及到的发布人在内部银行从FR总账支付设置负债账户。图11展示了FedWire交易流程。</p>
+<p>Alice创立了一个FedWire贷款，其中花旗银行作为OFI，国富银行作为RFI。花旗银行立刻把Alice的账户计入借方，国富银行几分钟后确认Bob的账户。</p>
+<p>内部来看，花旗银行向FR提交了一份授信需求，需求之后给到了国富银行。FR进行结算交易，把钱在FR总账上从花旗银行转到国富银行。当交易实际开展的时候，结算总数额被转账，这一形式的支付过程被称为实时全额结算（RTGS）。分别假设花旗银行和国富银行不存在授信风险。</p>
+<p>沿着这一点继续拓展，我们把花旗银行看作发行者1，国富银行看作发行者2.目标是展示一个把花旗，国富以及FR作为加密总账的协议。</p>
+<p>p16</p>
+<p>SL3P提供了一个在图12里描述的路径。发行者开设了单向的，在FR总账和追踪财产总账之间的SL3P通道。一个发布者2维护的SL3P通道在图12里显示。在总账2中，发布者2创立了在通道一端(one end of the channel)的资产和负债。用深粉红色标记。</p>
+<p>单向SL3P通道指的是支付方向是单向的改进结构。在小节7b中，这是一个简单的修缮。</p>
+<p>Alice创立了转账V给发布者1的交易。交易包含说明最终总账的数据和Bob的账户。这有效地打击了Alice持有，发布者1 发布的财产。</p>
+<p>假设花旗银行有必须的流动性，它把V转账到FR总账的发布者2 维护的SL3P协议。接着，它把支付凭证给到总账2的另一方，并且把转账给到Bob的账户。</p>
+<p>假设有足够的协议余额，总账2 SL3P协议核实支付凭证完成了转账。发布者2阶段性地把资金下载到协议来保持RTGSP转账流通。当协议余额没有达到，发布者1能重新尝试或者从通道(channel)另一端要回财产。</p>
+<p>p17</p>
+<p>尽管目前证明RTGSP是可行的，可没有涉及RTGS系统的核心挑战：流动性管理。附录B会涉及到这个问题。</p>
+<p>RTGSP能够确保FedWire和其他全额清算系统的自动化。FR的作用被限制用来作为单纯的发布者。只要FR总账共识池可以达到，系统就能够运行。目前，美国FedWire系统的作用被限于09:00到18:00 ET。</p>
+<p>FR总账的去中心化和RTGS系统可以作为一个优质的运行风险控制和商务持久性政策。节点可以地理意义上去中心化，使得不同动能系统相互独立，建立数据备份。总的来说，所有系统性重要的支付系统很明显地从运营风险控制带来的去中心化化获利。</p>
+<pre><code>7D。递延净额结算协议（DNSP）
+</code></pre><p>DNSP和SL3P以及RTGSP解决同样的问题：Alice有花旗银行在总账1里的V美元，她想把钱转给Bob。Bob是国富银行在总账2的客人。</p>
+<p>取代支付清算，像RTGSP一样，结算作为FR总账的转账；DNSP最终创立了一个花旗对国富的债务。多重债务可以聚合。只要双方同意FR总账，净量会在发布者之间转账。支付清算是发布者之间关于债务关系所创立的，同时支付关系式在FR总账上进行转账。DNSP把支付推迟到了支付清算后。协议需要发布者之间相互信任。</p>
+<p>DEP,SL3P和RTGSP的连结能应对一大部分的银行交易。DNSP因为完整性被涵盖。它等同于美国的ACH系统。</p>
+<p>由Ryan Fugger和Ripple项目领衔的横向交易(traversal transactions)构建了DNSP的中心。一个横向总账，使得横向交易拥有除了至今想到的以有特性：</p>
+<p>账户能够建立与其他账户的可信联系。一个可信联系是账户持有者在共识池中的批准，允许池依照价值和对手方(party)在信任联系里的规定改变账户余额。<br>共识池可以把一个账户对另一个的支付改成其他账户的余额，受限于信任联系定下的约束。</p>
+<p>图13介绍了一个美元横向总账，有四个参与者：Eve, Frank, Gary和Harry。图13a的左侧展示了信任联系情况。一根线从frank到eve，价值M美元。表示frank同意eve欠它不超过M美元。参与者能动态改变信任联系。</p>
+<p>图13b右边展示了eve和Harry之间W美元的横向交易支付。在支付之前，我们假设没有一根参与者彼此有债务关系。交易之后，eve欠frank W美元，frank欠Gary W美元，Gary欠Harry W美元。哈人有接受这W美元的支付。</p>
+<p>每个账户的净余额等于参与者持有的债权减去持有的债务。交易后Frank和Gary的净余额保持不变。Gary和frank没有积极参与交易。Harry的作用是核实支付情况。</p>
+<p>因为总账也许会有更多参与者；共识池技术最优支付路径，由13b的红色箭头表述，同时自动调节余额。</p>
+<p>p18</p>
+<p>对于DNSP，我们假设多位发布者作为国内横向总账的一部分。横向总账变为支付清算机制，信任联系有两位发布者协商而定。DNSP有两个阶段，在图14a和14b表述。</p>
+<p>阶段一：Alice创立支付，发布者1给发布者2财产</p>
+<p>发布者在总账上创立一个第三方合同，追踪财产，给合同下载财产。第三方合同的能力之后会解释。<br>Alice V在总账1上把财富转给发布者1。交易包含最终总账和Bob的元数据地址。<br>发布者1和发布者2在国内清算总账做一笔价值W的横向交易。W小于V，在0-5美元之间。<br>发布者1把上述的支付证明给到总账2的第三方协议，要求协议给出V<br>第三方协议核实支付凭证，下一步假设证明无误<br>如果有超过V的资金，它在T时刻转V。在0到T时刻之间，当发布者1完成阶段二，V仅能被转给Bob。T大概是一分钟。<br>如果协议没有完成转钱的资金，它把W转给Bob，给发布者2发送“预约被拒”的消息。</p>
+<p>p19</p>
+<p>阶段二：发布者1把财产（V-W）转到清算总账，要求Bob进行支付</p>
+<p>假设预约成功，发布者1在清算账户转钱（V-W）给发布者2<br>发布者1把上述支付凭证给到总账2的第三方协议，问Bob要V<br>第三方协议核实支付凭证，如果无误，把留存资金转给总账2的Bob。<br>当发布者1不能在时间T内完成阶段二，发布者1可以要求给Bob W的转账。第三方在这种情况下可以发动一个罚金X （X&lt;W）</p>
+<p>p20</p>
+<p>在目前的状态下，DNSP有一个缺陷。在阶段一，第三方协议也许被耗尽然后资产小于W。这会导致发布者1承受W的损失。因为如下原因，这个缺陷可以容忍：</p>
+<p>面临风险的资产数额低。W大概是5美元，相较于实体支付系统是个小数额。<br>如果第三方协议耗尽，所有在总账2的DNSP支付会停止，因为总账2是公共的，问题会升级。发布者2的声誉会在DNSP关闭的期间受损。</p>
+<p>发布者之间撇除DNSP的债务关系是在双方同意后建立在FR总账上的。清算在FR总账上只是两个发布者之间的简单转账，因此不被注解。<br>DNSP区分了清算和结算过程，导致给Bob的快速转账（少于10秒）。许多现在的系统，像是美国的ACH和英国的Bacs，清算和结算转账每天只有一次。因此DNSP能够做到一个提升。此外，清算总账里的信任联系设计移除了目前的两层布置的中心控制成员系统。任何发布者只要保证在与另外发布者的信任联系里能够参与清算。<br>对于对称的系统重要支付系统，去中心化清算总账减少了营业风险，是商业持续连续性的方式。</p>
+<h1 id="联合"><a href="#联合" class="headerlink" title="联合"></a>联合</h1><p>之前的小节对协议的每个特征着重解释了一下，在实现上略令人沮丧。这些明显的负责性是源于实际系统中的相互作用，同样能简化到实现时一个简单优雅的层面。</p>
+<p>一个关键的观察是利用了DEP和RTGSP的总账协议是SL3P的衍生。图15表达了这个结论。<br>p21</p>
+<p>对于上述论述，也许挑战在于把发布与接收协议是SL3P协议的衍生可视化。请参考7b，把Alice换成Carol；Alice和Bob换成Bob。此外，取而代之总账只处理单一货币，它们那个处理不同货币。这些取代之后的交易流程是货币交易。</p>
+<p>我们可以停止参考不同名字的协议，尽管作者信息信息这有助于区分。</p>
+<p>拓展（pathfinding）层面<br>在拓展层面，之前描述的协议被自动看成5类：</p>
+<p>两个账号直接的财产转移。假设执行时间小于2秒。<br>两个通过DEP追踪不同或相同资产种类的总账。假设执行时间小于4秒。<br>两个通过SL3P追踪相同种类货币的总账。假设执行时间小于4秒。<br>两个通过RTGSP追踪相同种类货币的总账。假设执行时间小于6秒。<br>两个通过DNSP追踪相同种类货币的总账。假设执行时间小于10秒。</p>
+<p>任何源于一个加密总账结束与另一个总账的全球支付，汇款，资产购置或交易能分成上述所说的5类自动运营。拓展层面的任务是结算最优自动运营集来执行需要的财产转账或交易。</p>
+<p>小的世界网络相识社交网络，通过短距离双节点连接。我们假设，没有证明，货币的金融互联网也是一个小世界网络。实际上，这意味着任何全球财产转账/交易能在最长不超过5-7自动运营下执行。一分钟的 全球最长转账世界看起来在这样的连接下可以接受。</p>
+<p>拓展算法的原始数据有以下几种：</p>
+<p>不同总账上有的即时DEP数据库<br>一组在总账之间运营的SL3P通道<br>一组全球承认的RTGSP网络<br>若干组参与RTGSP网络的发布者<br>一组全球公认的DNSP网络<br>让观众参与DNSP网络的发布者<br>执行自动步骤的，成本功能数据的金钱成本</p>
+<p>互联网上类似的挑战层面有途径协议，例如RIP, OSPF和BGP。通过互联网的交流路径需要路由器和节点不断广播可达信息。作为一个跨多路由/节点的拟分布算法是可视的。</p>
+<p>在货币的互联网，集中的服务中路径需求可以被发送，收到的最优路径合理。数据的收集和计算外包给这些服务商来减轻客户的工作量。实际的计算最优路劲算法将留到日后的文章来讨论。</p>
+<p>一旦客户得到了最优路径，路径执行全球价值转移和交易的自动运营。</p>
+<p>图15展示了拓展情况。Alice在美国总账上有瑞士法郎资产，她想要买苹果的股权。她发起了一个对拓展服务器的路径需求。拓展服务器有一个RTGSP网络的数据库，DNSP网络和不同总账的协议。它评估了3个可选路径，包括Alice可以拿的数量。它指出了Alice的最优路径和解释了支付和交易费用。</p>
+<p>Alice的客户有一个协议软件来执行需要自动运营的行动。她如是操作也得到了想要的股权。</p>
+<p>p21</p>
+<p>协议层</p>
+<p>协议层使得交叉价值和任意编代码运行来改变值余额。可以通过实现codius和gavin andresen的可编程的仲裁（programmable orcles）项目来实现。</p>
+<p>协议层的优势项是让低级层作为单一(singular)全球总账。这一抽象总账可以保持余额，一分钟内转移财产。</p>
+<p>由一组特殊的实体所控制的，替智能协议的资金成为了N中M个多重签名的账户。协议代码是同时发送给各个实体的。每次协议机构想要给合同发送一个消息，他们把消息给到仲裁(oracles)里。仲裁跑代码来计算参与者的余额。如果编码导致才协议提款给某个指定地址的执行操作，则仲裁循环交易转移资金并且签名。资金转移由货币的互联网较低层来处理。图17展示了这一协议层。</p>
+<p>p23 </p>
+<p>12小节量化了总账协议与协议层之间的差异。总的来说，总账协议用来构建支付和交易协议。其他使用案例智能协议在协议层实施。</p>
+<p>举个例子，伦敦布鲁特有一份Alice和Bob之间的原油期货协议。协议由电脑编码表示，仲裁执行；执行实体取回外部数据为Alice和Bob在结算的时候计算新的余额。在编码执行后，再次通过较低的货币互联网层达到Alice和Bob之间的余额。</p>
+<p>另外一个例子是专业买家卖家的调停，在图四中可见。Alice是买家，Bob是卖家。他们想要依照成功交付的时间来定义支付数额。Bob在长期交付的情况下会要付罚金。协议建立后Alice出款。协议的服务核实货物的交付，依此付钱给了Bob。</p>
+<p>第三个例子是数字资产竞拍。建立协议来实行竞拍的规则。如果数字资产主交付给了项目仲裁，规则执行。</p>
+<p>应用层</p>
+<p>和TCP-IP协议组相似，这一层包含应用和用户间交流。特别地，一下内容在商业上尤其重要。</p>
+<p>借方和贷款为基础的支付网络<br>尽管货币互联网被预见，同时在全球范围内提升价值转移速度的数量级，一些使用案例需要支付网络，例如Visa和Mastercard。有下述案例：</p>
+<p>转移认证需要猝发，例如商店购买情况。<br>多重自动转移和交易的操作需求使得自有秘钥必须被多次使用。一个支付网络会要有额外的安全性。<br>支付网络促进买卖双方的仲裁。<br>通过支付网络可以有效减少结算风险。它通过技术减短了支付以及交易时间。Visa在2013年九月三十日结算数额被爆为五千三百八十万美元。</p>
+<p>最终，协议层能让一些例如双保证金托管（double deposit escrow）的新仲裁方法可行。</p>
+<p>期货，期权，衍生品，预测(prediction)和其他市场<br>作这篇文章的核心理念之一是分类原则：每个货币互联网的特性都是有不同实体来运作的。例如，共识池是由总账维护从事，银行做资产发行与合规的工作，拓展服务由拓展来做，其他企业做协议应用。</p>
+<p>协议和应用层确保了期货，期权，衍生品，仲裁市场的发展。不同的服务能细分市场。</p>
+<p>Hazard关于智能协议的游戏<br>作为示例，这个游戏可以看作有以下规则的协议：</p>
+<p>Roulette轮的旋转是模范熵源<br>以广义熵的输入作为参与者余额的改变。<br>价值的专移与交易通过较低货币互联网层来进行<br>我们宣称，没有证明，hazard所以游戏包括扑克，二十一点都是以智能协议来实施的。</p>
+<p>去中心化应用<br>抽象总账是简历去中心化应用的有力基石。目前依照的方式有在接触服务时构建新的代笔，例如去中心化存储，多跳网络（mesh network）和信誉体系。货币互联网提供了构建代币的方式。例如。一个分享硬盘空间的DApp在附录C里提及.</p>
+<p>再看总账层</p>
+<p>这一小节会通过思考一些问题来获取对总账层最少需求的更优理解（小节6）：</p>
+<p>为什么总账不能被开发者控制？</p>
+<p>支付和交易协议构建时让开发者以外的实体来执行总账上的交易。例如RTGSP：发布者1给Bob在总账上发送支付，发布者2不参与。现在假设发布者2的服务器是共识池里维护总账2的唯一节点。</p>
+<p>以上情况发布者2可以建立一个新的总账历史记录，与过去的记录不共识，声称发布者1从未完成给Bob的支付。如果Alice和发布者1无法获取旧有历史记录时间，就无法很好地讨论新的历史。争论时法务成本会比预期规定的大。</p>
+<p>假设的解决方式是有多重对手方通过去中心化的共识过程来维护总账。通过去中心化化，发布者和顾客能确保总账的公平。因此：</p>
+<p>去中心化化服务能提高总账公平信心。共识池里参与的节点越多元，对公平的保证越强。</p>
+<p>权衡内在的去中心化是有效的。节点需要去相互证明它们的过程并且交流来达到共识。这博士宽带和计算更优于相同的集中总账。</p>
+<p>为了去中心化而去中心化博士一个提倡的策略。本文的观点是：</p>
+<p>某个使用案例的去中心化化程度需求是个求最优的问题</p>
+<p>影响有效性的因素，定义为交易处理过的投资节点中每个NPV美元是：</p>
+<p>共识过程的选择<br>节点身份假设。有效性在节点身份已知的时候戏剧性地增加。比特币节点是匿名的，网络会蒙受高额成本，0-5亿美元每年来保持共识。<br>节点数额。总的来说，共识池越大，有效性越低。</p>
+<p>影响总账公平相信的因素：</p>
+<p>共识池的构成。当例如谷歌这样有信誉的公司在池子里有节点，它会推动池子的信心。谷歌所有节点的恶意行为会有损它的市场信誉。存亡危急时谷歌的商誉可能价值百万美元。<br>共识过程的选择。比如，实际拜占庭容错能容下池子里最多33%的恶意节点。<br>共识池里控制节点的不同实体数额。数额越高，越可信。</p>
+<p>总账信誉的信誉额依据风险时的价值。提倡的策略是：</p>
+<p>目标是保持资产处于风险或总账有效可信之间的余额。</p>
+<p>例如，越高同质池也许能追踪两个杂货连锁店的忠实点数。花旗银行总账会因高信任/去中心化化获益。</p>
+<p>最优总账层协议</p>
+<p>因为每个使用案例有不同的最优池组成和节点数，总账层协议需要十分灵活。对协议的用法，开发性和发展没有限。共识过程应该在跨部情况下有最好的有效性。</p>
+<p>超总账项目是这个方向的先驱。充满希望地，其他系统目标的项目在跟进。</p>
+<p>为什么总账要是公开的？</p>
+<p>所有这里所说的支付和交易协议都是基于公开总账的。另一方不能在私人总账上查看邀约或核实支付。</p>
+<p>如果应用假设有价值，均衡化隐私增强了需要发展的科技。类似地，支付需要监控金融交易的方式。当保障金融隐私的成本不超过客户从例如去中心化交易等应用中的获利时，货币互联网的投资可以被看见。</p>
+<p>介于隐私问题被解决了，作者对潜在全球交易数据获取公开带来的经济理论和危机管理的提升表示激动。</p>
+<p>关于多重签名账户</p>
+<p>多重签名账户除了增强了客户安全，协议层同样需要值得信任的执行。智能协议需要被核实，同时由多重有区别的项目仲裁来执行仲裁池需要为日常运营获得连结多重签名账户。</p>
+<p>关于共识池的时间排列机制</p>
+<p>时间排列机制为池节点时间校准提供了方法。好的设计源于建立有效的最小组成。这篇论文为DNSP和MTXP(附录A中)利用时间基础交易。去除时间排列机制还保存功能的方式还需要去发现.</p>
+<p>降低萌芽阶段的风险和复杂性 </p>
+<p>意见和开放性问题</p>
+<p>加密总账的基本优势</p>
+<p>本文假设了加密协议的构建利用了加密总账，从而使得建立了参与的发布者和客人之间低信任的金融关系。低信任关系能减少交易成本，对于客人来说是一个净收入。</p>
+<p>扩展性分析和基于拉取的支付</p>
+<p>电子签名的使用使得所有加密总账系统成为基于推送的。目前ACH的实施使得基于拉取的ACH借方能够实行，它有多重例如保险支付，贷款分期偿还和公共设施支付等应用。</p>
+<p>这些应用能建立在协议/应用层是依靠一个机制的。当Alice作为Bob的一个客人是，有一个一个公用事业单位。Alice和Bob建立一个由互相信任的仲裁持有的智能协议。Alice给合同注入款项作为月度使用支付。协议包含让Bob每月提款的条约。</p>
+<p>身份认证和匿名层的实施</p>
+<p>顺从规则从而还产生了一个问题：公共秘钥后的身份必须能让某个组织（例如发行方）联系到从而抵制一些例如污点分析的问题。有个核实发行方和总账的方法同样是首要条件。</p>
+<p>Reference<br><a href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="noopener">https://bitcoin.org/bitcoin.pdf</a><br><a href="https://en.bitcoin.it/wiki/Script" target="_blank" rel="noopener">https://en.bitcoin.it/wiki/Script</a><br>页20-28，在TCP-IP协议栈，4 日 版，贝洛兹A. Forouzan<br><a href="http://hyperledger.com/" target="_blank" rel="noopener">http://hyperledger.com/</a><br><a href="https://www.regaltek.com/docs/understanding-ach-network.pdf" target="_blank" rel="noopener">https://www.regaltek.com/docs/understanding-ach-network.pdf</a><br><a href="https://github.com/TierNolan/bips/blob/bip4x/bip-atom.mediawiki" target="_blank" rel="noopener">https://github.com/TierNolan/bips/blob/bip4x/bip-atom.mediawiki</a><br><a href="https://github.com/petertodd/bips/blob/checklocktimeverify/bip-checklocktimeverify.mediawiki" target="_blank" rel="noopener">https://github.com/petertodd/bips/blob/checklocktimeverify/bip-checklocktimeverify.mediawiki</a><br><a href="http://gendal.wordpress.com/2014/01/05/a-simple-explanation-of-how-shares-move-around-the-securities-settlement-system/" target="_blank" rel="noopener">http://gendal.wordpress.com/2014/01/05/a-simple-explanation-of-how-shares-move-around-the-securities-settlement-system/</a><br>页323-374，在TCP-IP协议栈，4 日 版，贝洛兹A. Forouzan<br><a href="https://github.com/codius/codius/wiki/Smart-Oracles:-A-Simple,-Powerful-Approach-to-Smart-Contracts" target="_blank" rel="noopener">https://github.com/codius/codius/wiki/Smart-Oracles:-A-Simple,-Powerful-Approach-to-Smart-Contracts</a><br><a href="http://gavintech.blogspot.ch/2014/06/bit-thereum.html" target="_blank" rel="noopener">http://gavintech.blogspot.ch/2014/06/bit-thereum.html</a><br><a href="http://www.sec.gov/Archives/edgar/data/1403161/000140316113000011/R19.htm" target="_blank" rel="noopener">http://www.sec.gov/Archives/edgar/data/1403161/000140316113000011/R19.htm</a><br><a href="http://bithalo.org/wp-content/uploads/2014/06/whitepaper_twosided.pdf" target="_blank" rel="noopener">http://bithalo.org/wp-content/uploads/2014/06/whitepaper_twosided.pdf</a><br><a href="https://www.ethereum.org/pdfs/EthereumWhitePaper.pdf" target="_blank" rel="noopener">https://www.ethereum.org/pdfs/EthereumWhitePaper.pdf</a></p>
+<p>关于作者<br>作者Meher Roy 联系方式：</p>
+<p>电子邮件1：meher.roychowdhury@gmail.com</p>
+<p>电子邮件2：mr@hyperledger.com</p>
+<p>LinkedIn：<a href="https://www.linkedin.com/pub/meher-roy/43/969/254" target="_blank" rel="noopener">https://www.linkedin.com/pub/meher-roy/43/969/254</a> </p>
+<p>微博：<a href="https://twitter.com/MeherRoy" target="_blank" rel="noopener">https://twitter.com/MeherRoy</a></p>
+<p>特别感谢Tim对马卡里奥斯指出错误，并建议有关负责穿越交易协议。</p>
+<p>0.4版本可能的更新</p>
+<p>对准Hyperledger白皮书</p>
+<p>Hyperledger是一个总账层协议的最好例子，目标是一对2兼容的文件（Hyperledger白皮书+当前文档）。</p>
+<p>考虑负责任的穿越交易协议作为一个更好的DNSP</p>
+<p>引用参考：</p>
+<p><a href="http://ideophilus.wordpress.com/2014/11/05/a-responsible-transitive-transactions-protocol/" target="_blank" rel="noopener">http://ideophilus.wordpress.com/2014/11/05/a-responsible-transitive-transactions-protocol/</a></p>
+<p>附录A，B和C的完成</p>
+<p>附录A：微交易协议（MTXP）</p>
+<p>附录B：方法RTGSP流动性管理</p>
+<p>附录C：分权应用体系架构（DApps）</p>
+<hr>
+<p>感谢维优提供的翻译</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/概念/">概念</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链-入门/">区块链 入门</a></li></ul>
+
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: '打赏支持', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/alipay-ch.png',
+  alipayImage: 'http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/wechat-ch.png'
+});
+</script>
+      
+            
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/archives/04-build-your-own-blockchain.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          如何搭建自己的区块链
+        
+      </div>
+    </a>
+  
+  
+    <a href="/archives/02-bitcoin-and-byzantine-issue.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">比特币(bitcoin)自私挖矿与拜占庭将军问题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍-1"><span class="nav-number">2.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#缩写和定义"><span class="nav-number">3.</span> <span class="nav-text">缩写和定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#框架"><span class="nav-number">4.</span> <span class="nav-text">框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#比特币的总账合约"><span class="nav-number">5.</span> <span class="nav-text">比特币的总账合约</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#含有以太坊的总账合约"><span class="nav-number">6.</span> <span class="nav-text">含有以太坊的总账合约</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总账层"><span class="nav-number">7.</span> <span class="nav-text">总账层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#支付和交易层"><span class="nav-number">8.</span> <span class="nav-text">支付和交易层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#联合"><span class="nav-number">9.</span> <span class="nav-text">联合</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 blockchaindev.org All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        The New Reality <a href="https://mvs.org" target="_blank">Metaverse</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+<script src="/js/my.js"></script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

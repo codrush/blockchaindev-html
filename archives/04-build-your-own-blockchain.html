@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    <script src="/js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>如何搭建自己的区块链 | blockchaindev.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="区块链 入门 比特币" />
+  
+  
+  
+  
+  <meta name="description" content="一、 环境依赖OS 选择：ubuntu 14 ~ 15 均可为了减少实践过程中出现的大量的依赖库的安装的繁琐程度，推荐ubuntu，当然其他发行版的Linux也是可以的。 开发倚赖包：12345apt-get install libboost-all-devapt-get install opensslapt-get ">
+<meta name="keywords" content="区块链 入门 比特币">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何搭建自己的区块链">
+<meta property="og:url" content="http://blockchaindev.org/archives/04-build-your-own-blockchain.html">
+<meta property="og:site_name" content="blockchaindev.org">
+<meta property="og:description" content="一、 环境依赖OS 选择：ubuntu 14 ~ 15 均可为了减少实践过程中出现的大量的依赖库的安装的繁琐程度，推荐ubuntu，当然其他发行版的Linux也是可以的。 开发倚赖包：12345apt-get install libboost-all-devapt-get install opensslapt-get install libssl-devapt-get install libdb5">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-16T07:35:20.922Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何搭建自己的区块链">
+<meta name="twitter:description" content="一、 环境依赖OS 选择：ubuntu 14 ~ 15 均可为了减少实践过程中出现的大量的依赖库的安装的繁琐程度，推荐ubuntu，当然其他发行版的Linux也是可以的。 开发倚赖包：12345apt-get install libboost-all-devapt-get install opensslapt-get install libssl-devapt-get install libdb5">
+  
+    <link rel="alternate" href="/atom.xml" title="blockchaindev.org" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/my.css">
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="blockchaindev.org" rel="home"> blockchaindev.org </a>
+            
+          </h1>
+
+          
+            <div class="site-description">一个区块链概念普及、区块链技术分享的专栏</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/Jingxuan013.jpg".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-archives/04-build-your-own-blockchain" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      如何搭建自己的区块链
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/04-build-your-own-blockchain.html" class="article-date">
+	  <time datetime="2016-01-25T15:44:21.000Z" itemprop="datePublished">一月 25, 2016</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、 环境依赖<br>OS 选择：<br>ubuntu 14 ~ 15 均可<br>为了减少实践过程中出现的大量的依赖库的安装的繁琐程度，推荐ubuntu，当然其他发行版的Linux也是可以的。</p>
+<p>开发倚赖包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt-get install libboost-all-dev</span><br><span class="line">apt-get install openssl</span><br><span class="line">apt-get install libssl-dev</span><br><span class="line">apt-get install libdb5.3++-dev</span><br><span class="line">apt-get install libminiupnpc-dev</span><br></pre></td></tr></table></figure></p>
+<p>secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指定版本才能work，当前版本并不支持最新版本的secp256k1. </p>
+<a id="more"></a>
+<p>一、 环境依赖<br>OS 选择：<br>ubuntu 14 ~ 15 均可<br>为了减少实践过程中出现的大量的依赖库的安装的繁琐程度，推荐ubuntu，当然其他发行版的Linux也是可以的。</p>
+<p>开发倚赖包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt-get install libboost-all-dev</span><br><span class="line">apt-get install openssl</span><br><span class="line">apt-get install libssl-dev</span><br><span class="line">apt-get install libdb5.3++-dev</span><br><span class="line">apt-get install libminiupnpc-dev</span><br></pre></td></tr></table></figure></p>
+<p>secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指定版本才能work，当前版本并不支持最新版本的secp256k1. </p>
+<p>代码获取：</p>
+<p>git clone <a href="https://github.com/betachen/ttcoin.git" target="_blank" rel="noopener">https://github.com/betachen/ttcoin.git</a><br>共识模型基于 Pow + Pos</p>
+<p>二、编译<br>本文只研究核心代码, qt部分代码不考虑，进入目录 ttcoin/src<br>直接make, 如果编译过程中出现了not found某某依赖包，直接拷贝名称安装即可，需要注意版本<br>大约等待10几分钟，编译完成可以看到生成了ttcoind。<br>如果需要完全创建自己的区块链，请按照《从 0 到 1 建立自己的区块链》修改少量hard codeing的代码重新编译即可。<br>其中hashGenesisBlock部分的代码已经在文件中，只需打开条件编辑即可生成创世块</p>
+<p>三、尝试单机运行<br>第一次运行需要配置一些简单的参数，根据提示设置即可<br>默认交易端口是12009，使用debug命令可以在 ~/.ttcoin/debug.log 看到更详细的信息</p>
+<p>1<br>./ttcoind -debug<br>因为是从bitcoin fork过来的，所以可以使用bitcoin绝大部分的JsonRPC:<br><a href="https://blockchain.info/api/json_rpc_api" target="_blank" rel="noopener">https://blockchain.info/api/json_rpc_api</a></p>
+<p>四、挖矿<br>当你的binary可以运行了，你真正的旅程才开始：先挖矿产出币，接下来再尝试多节点运行–&gt;多节点交易<br>理想的情况是，运行Binary以后，会出块产生coinbase交易。</p>
+<p>（挖矿分为SOLO和POOL两种方式<br>SOLO单机就可以，但是效率会很低，初始块可能将近1个小时左右才能出来<br>POOL挖矿可以线性减少时间）</p>
+<p>五、尝试多节点运行<br>bitcoin是一种P2P网络，可以使用下面的方式理解。<br>假设存在A、B、C、D四个核心节点<br>当B、C、D都和A链接时，A会告诉A都链接了谁，这样就形成互通的P2P网络。<br>使用命令链接peer：</p>
+<p>./ttcoind -debug -addnode=192.168.1.2</p>
+<p>六、多节点相互交易<br>可以参考bitcoind的用法进行交易</p>
+<p>七、代码剖析<br>ttcoind 是从 bitcoind.cpp 的 main函数进入的<br>真正执行初始化的是AppInit2函数</p>
+<p>1<br>fRet = AppInit2(threadGroup);<br>在AppInit2中我们可以看到起了约7个线程</p>
+<p>（后续更新）</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/代码/">代码</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链-入门-比特币/">区块链 入门 比特币</a></li></ul>
+
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: '打赏支持', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/alipay-ch.png',
+  alipayImage: 'http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/wechat-ch.png'
+});
+</script>
+      
+            
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/archives/05-opensource-blockchain-project.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          区块链的联盟链开源项目介绍
+        
+      </div>
+    </a>
+  
+  
+    <a href="/archives/03-architecture-of-value-internet.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">货币的一种互联网体系架构</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav">无</ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 blockchaindev.org All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        The New Reality <a href="https://mvs.org" target="_blank">Metaverse</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+<script src="/js/my.js"></script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

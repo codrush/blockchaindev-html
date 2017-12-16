@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    <script src="/js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>blockchaindev.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="一个区块链概念普及、区块链技术分享的专栏">
+<meta property="og:type" content="website">
+<meta property="og:title" content="blockchaindev.org">
+<meta property="og:url" content="http://blockchaindev.org/index.html">
+<meta property="og:site_name" content="blockchaindev.org">
+<meta property="og:description" content="一个区块链概念普及、区块链技术分享的专栏">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="blockchaindev.org">
+<meta name="twitter:description" content="一个区块链概念普及、区块链技术分享的专栏">
+  
+    <link rel="alternate" href="/atom.xml" title="blockchaindev.org" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/my.css">
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body>
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="blockchaindev.org" rel="home"> blockchaindev.org </a>
+            
+          </h1>
+
+          
+            <div class="site-description">一个区块链概念普及、区块链技术分享的专栏</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/Jingxuan013.jpg".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main">
+  
+    <article id="post-conception/conceptions-on-BAAS"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/conception/conceptions-on-BAAS.html">谈谈对区块链服务（BaaS）的理解</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/conception/conceptions-on-BAAS.html" class="article-date">
+	  <time datetime="2017-05-22T15:44:21.000Z" itemprop="datePublished">五月 22, 2017</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            我认为在下半年会一个有关区块链的新词火热起来：BaaS（区块链即服务Blockchain as a Service）
+理由有两：
+第一、目前区块链的私有链（联盟链）竞争已经进入白热化阶段，HyperLedger/EEA等私有链产品已经摩拳擦掌，国内也有很多类似产品在相互竞争。目前还未进入真正的市场宣传阶段，如果进入对技术型产品的宣传阶段，势必会将BaaS的概念炒热。
+第二、BaaS的概念可以很好地与云服务平台相结合，形成将区块链技术框架嵌入云计算平台的结合趋势。
+我认为上述趋势和做法，完全偏离了的区块链发展方向。我会详细说明以下几点以证明我的观点：
+
+什么是区块链服务？
+什么是区块链技术服务？
+两者区别。
+为什么说区块链服务比区块链技术服务重要？
+如何构建区块链服务？
+
+
+我认为在下半...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/conception/conceptions-on-BAAS.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/概念/">概念</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链服务/">区块链服务</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-archives/13-development-in-blockchain"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/archives/13-development-in-blockchain.html">如何使用区块链技术进行项目开发</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/13-development-in-blockchain.html" class="article-date">
+	  <time datetime="2017-02-09T05:14:21.000Z" itemprop="datePublished">二月 9, 2017</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            区块链是目前一个比较热门的新概念，蕴含了技术与金融两层概念。从技术角度来看，这是一个牺牲一致性效率且保证最终一致性的的分布式的数据库，当然这是比较片面的。从经济学的角度来看，这种容错能力很强的点对点网络，恰恰满足了共享经济的一个必须要求——低成本的可信环境。
+本文以联盟链为例，描述了实践一个联盟链的基本过程，包含以下内容：
+业务场景的构建与初步分析,业务场景建模,开发路径,开发难点。本文无法涵盖所有类型的开发，主要提供一些开发思路，并附带说明一下可行的做法。
+
+区块链是目前一个比较热门的新概念，蕴含了技术与金融两层概念。从技术角度来看，这是一个牺牲一致性效率且保证最终一致性的的分布式的数据库，当然这是比较片面的。从经济学的角度来看，这种容错能力很强的点对点网络，恰恰满足了共享经济的一个...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/archives/13-development-in-blockchain.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/开发/">开发</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-archives/12-infoq-tech-shares"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/archives/12-infoq-tech-shares.html">InfoQ中国技术开放日-上海站-链上金融</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/12-infoq-tech-shares.html" class="article-date">
+	  <time datetime="2016-12-17T05:44:21.000Z" itemprop="datePublished">十二月 17, 2016</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            笔者荣幸参加了2017年年底中国技术开放日上海站的演讲，2016年12月17日，由极客邦科技、XNode联合主办，上海市静安区科学技术委员会光临指导的“中国技术开放日上海站之FinTech专场——技术重定金融，未来大有不同”在静安区800秀创意园圆满召开。FinTech所带来的机遇和挑战、区块链、大数据、人工智能、云计算、智能投顾等6大主题演讲分别讲述了重要的FinTech发展趋势，分享了目前行业里领先的实践经验。视频地址
+
+笔者荣幸参加了2017年年底中国技术开放日上海站的演讲，2016年12月17日，由极客邦科技、XNode联合主办，上海市静安区科学技术委员会光临指导的“中国技术开放日上海站之FinTech专场——技术重定金融，未来大有不同”在静安区800秀创意园圆满召开。FinT...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/archives/12-infoq-tech-shares.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/资料/">资料</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-archives/10-from-Paxos-to-PBFT"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/archives/10-from-Paxos-to-PBFT.html">从Paxos到拜占庭容错，兼谈区块链的共识协议</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/10-from-Paxos-to-PBFT.html" class="article-date">
+	  <time datetime="2016-08-03T02:24:21.000Z" itemprop="datePublished">八月 3, 2016</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            这是一篇转载文章，原文地址，原文作者data-geek已授权转载。本文建立在在很多论文的基础上，概括得非常好，比我的《浅谈区块链共识机制与分布式一致性算法》更深度。
+高可用架构在分布式系统设计中是最核心的挑战之一，拜占庭容错则是解决高效容错问题的通用方案。拜占庭系统来源于拜占庭将军问题，在古代，一些拜占庭的将军率领他们的部队要攻占敌人的一个城池, 每个将军只能控制他们自己的部队并且通过信使传递消息给其他的将军(这条消息只有参与的两个将军知道，其他的将军可以打听，但是不能验证消息的正确性)。如果这些将军中有些是来自敌方的奸细，那么如何使忠诚的将军仍然可以达成行动协议而不受奸细的挑拨，就是拜占庭将军问题。分布式系统的每一个节点可以类比成将军，服务器之间的消息传递可以类比成信使，服务器可能会...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/archives/10-from-Paxos-to-PBFT.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/理论/">理论</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-archives/09-bitcoin-serialize-class-CDataStream"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/archives/09-bitcoin-serialize-class-CDataStream.html">有关比特币Core源码CDataStream类的有趣问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/09-bitcoin-serialize-class-CDataStream.html" class="article-date">
+	  <time datetime="2016-08-01T19:44:21.000Z" itemprop="datePublished">八月 2, 2016</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            在阅读比特币源码过程中发现了一个有趣的问题。在文件src/serialize.h中，2012年9月提交的一个版本b019ea17ec7cc37d098982b4f0f4636e424ab4b8，我们可以看到一些历史代码：
+
+在阅读比特币源码过程中发现了一个有趣的问题。在文件src/serialize.h中，2012年9月提交的一个版本b019ea17ec7cc37d098982b4f0f4636e424ab4b8，我们可以看到一些历史代码：
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950#ifdef TESTCDATASTREAM// VC6sp6//...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/archives/09-bitcoin-serialize-class-CDataStream.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/代码/">代码</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-archives/08-on-limitation-of-private-chain"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/archives/08-on-limitation-of-private-chain.html">论联盟链局限性与公有链</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/08-on-limitation-of-private-chain.html" class="article-date">
+	  <time datetime="2016-06-23T12:44:21.000Z" itemprop="datePublished">六月 23, 2016</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            本篇探讨联盟链的局限性，并与公有链的关系。在本文中，我们定义联盟链为共享认证型区块链（Shared Permission Blockchain），与公有链的主要区别在于Permission上。
+一. 从假设的银行联盟链DAO说起现考虑银行联盟链模型，假设存在一个银行业区块链联盟，每个联盟节点是一个共识节点，即该数据包含了该银行的核心业务数据（客户信用，借贷账目etc）以形成一个联盟链DAO，那么我们有：
+1. 所有的银行客户信用数据是共享且共识的，即某s在A银行是VIP客户，信用非常良好，那么我们有：s去到该联盟链另一家银行办理业务时，该行需要承认s的信用。即信用共享，那么我们在信用共享时会遇到一个问题，如何对信用评级目前无法达成一致共识，即一定存在不同的节点，针对s的信用的评级差距过...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/archives/08-on-limitation-of-private-chain.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/理论/">理论</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链-入门/">区块链 入门</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-archives/07-build-digital-asset-exchange"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/archives/07-build-digital-asset-exchange.html">搭建一个区块链交易所需要什么？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/07-build-digital-asset-exchange.html" class="article-date">
+	  <time datetime="2016-05-14T05:44:21.000Z" itemprop="datePublished">五月 14, 2016</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            一个交易所到底应该具备什么要素呢？
+交易所核心功能——撮合引擎。撮合引擎其实是一个交易所的核心模块，实现起来依据几条非常简单的原则：
+
+成交价格优先-时间优先
+
+定价时间优先-价格优先
+
+卖方价格队列大于等于买方价格队列
+
+
+
+一个交易所到底应该具备什么要素呢？
+交易所核心功能——撮合引擎。撮合引擎其实是一个交易所的核心模块，实现起来依据几条非常简单的原则：
+
+成交价格优先-时间优先
+
+定价时间优先-价格优先
+
+卖方价格队列大于等于买方价格队列
+
+
+但是里面的实现还是很讲究的：
+a. 高可用，撮合引擎宕机如何处理？
+b. 实时成交，撮合引擎要求高速处理，IO一般都会成为瓶颈，如果避免IO是个非常有技术含量的问题。
+c. 用户接口设计
+这里的用户接口设计分： 下单HTTP API，以及响...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/archives/07-build-digital-asset-exchange.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/开发/">开发</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链-入门/">区块链 入门</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-archives/06-consensus-algorithm-introduction"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/archives/06-consensus-algorithm-introduction.html">浅谈区块链共识机制与分布式一致性算法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/06-consensus-algorithm-introduction.html" class="article-date">
+	  <time datetime="2016-03-16T19:44:21.000Z" itemprop="datePublished">三月 17, 2016</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            本文通过介绍传统分布式一致性算法和区块链共识模型，以及提出了一些有关两者关系的观点，让大家有个比较系统的了解。
+一、前言本文打算先提出观点。欢迎大家参与讨论。
+1. 传统分布式一致性算法和区块链共识过程的异同点相同点：
+
+Append only
+强调序列化
+少数服从多数原则
+分离覆盖的问题：即长链覆盖短链区块，多节点覆盖少数节点日志
+
+不同点：
+
+传统分布式一致性算法大多不考虑拜占庭容错(Byzanetine Paxos除外)，即假设所有节点只发生宕机、网络故障等非人为问题，并不考虑恶意节点篡改数据的问题；
+传统分布式一致性算法是面向日志（数据库）的，即更通用的情况，而区块链共识模型面向交易的，所以严格来说，传统分布式一致性算法应该处于区块链共识模型的下面一层。
+
+
+本文通过介绍传统分...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/archives/06-consensus-algorithm-introduction.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/理论/">理论</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链-入门/">区块链 入门</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-archives/11-how-to-learning-btcsrc"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/archives/11-how-to-learning-btcsrc.html">如何阅读&#34;三巨人&#34;的源码-比特币</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/11-how-to-learning-btcsrc.html" class="article-date">
+	  <time datetime="2016-02-27T04:44:21.000Z" itemprop="datePublished">二月 27, 2016</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            前言
+由于有很多新生区块链技术学习者，问我如何入门这些代码，所以打算放一篇文来介绍下。
+相较于中文资料各种教程类文章，本系列文章侧重源码架构和分析。
+这里所说的三大巨人是指：比特币，以太坊，比特股。其他微创新的代码可以以这些代码为base进行扩展研读，所以只打算介绍这三巨人。
+由于本人是CXX工程师，除了模块分析之外，其他源码的介绍主要以CXX的代码为主。
+考虑到难度，这里以比特股的代码最为复杂，以太坊的代码其次也最为舒服，
+而以上两个工程，都需要以比特币的源码作为支撑，而且比特币的代码算作区块链入门级的，即使对于CXX新手来说，也是可以一窥全貌的。
+所以本文主要以比特币的源码作为切入，在后续系列的文章会接续介绍另外两个巨人。
+
+（本文转载请告知，保留所有权利）
+前言
+由于有很多新生区...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/archives/11-how-to-learning-btcsrc.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/代码/">代码</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-archives/05-opensource-blockchain-project"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/archives/05-opensource-blockchain-project.html">区块链的联盟链开源项目介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/05-opensource-blockchain-project.html" class="article-date">
+	  <time datetime="2016-02-26T02:44:21.000Z" itemprop="datePublished">二月 26, 2016</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            以下一些私有链我选择性会进行实践，并给出说明，最后是比较评价，赶快mark吧~（作者保留权利，转载请联系)
+1) https://github.com/hyperledger/hyperledgerHpperLedger是一个进行中的项目，目前还没决定使用哪个版本作为主线开发，但是提供了以下四个候选方案：
+（这些内容是HyperLedger项目还未确定的时候，现在已经确定叫Fabric, GO语言开发)
+a. https://github.com/ripple/rippled
+瑞波币的推荐方案
+实现语言：C++
+以下一些私有链我选择性会进行实践，并给出说明，最后是比较评价，赶快mark吧~（作者保留权利，转载请联系)
+1) https://github.com/hyperledger/...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/archives/05-opensource-blockchain-project.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/项目/">项目</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链-入门/">区块链 入门</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+  </nav>
+
+</section>
+          <aside id="sidebar">
+  
+    <div class="widget-wrap" style="margin: 20px 0;">
+	<div id="search-form-wrap">
+
+    <form class="search-form">
+        <label style="width: 75%;">
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field" style="height: 42px;" placeholder=" 搜索…" value="" name="s" title="Search for:">
+        </label>
+        <input type="submit" class="search-form-submit" value="搜索">
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+</div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">联系我们</h3>
+    <div class="widget widget_athemes_social_icons">
+
+    	<ul class="clearfix widget-social-icons">   
+    	
+          
+     			  <li><a href="https://github.com/betachen" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+     			  <li><a href="https://twitter.com/haochen1215" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 
+          
+   		
+          
+            <li><a href="mailto:hao.chen@viewfin.com?subject=请联系我&body=我能帮你什么" title="email"><i class="fa fa-envelope" aria-hidden="true"></i></a></li> 
+          
+   		
+   		</ul>
+
+
+   		<!--
+   		<ul class="clearfix widget-social-icons">   		
+   		<li class="widget-si-twitter"><a href="http://twitter.com" title="Twitter"><i class="ico-twitter"></i></a></li> 
+		<li class="widget-si-facebook"><a href="http://facebook.com" title="Facebook"><i class="ico-facebook"></i></a></li>
+			<li class="widget-si-gplus"><a href="http://plus.google.com" title="Google+"><i class="ico-gplus"></i></a></li>
+			<li class="widget-si-pinterest"><a href="http://pinterest.com" title="Pinterest"><i class="ico-pinterest"></i></a></li>
+			<li class="widget-si-flickr"><a href="http://flickr.com" title="Flickr"><i class="ico-flickr"></i></a></li>
+			<li class="widget-si-instagram"><a href="http://instagram.com" title="Instagram"><i class="ico-instagram"></i></a></li>
+		</ul> -->
+
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget_athemes_tabs">
+    <ul id="widget-tab" class="clearfix widget-tab-nav">
+      <li class="active"><a>最新文章</a></li>
+    </ul>
+    <div class="widget">
+      <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/conception/conceptions-on-BAAS.html">谈谈对区块链服务（BaaS）的理解</a></h6>
+              <span>五月 22, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/archives/13-development-in-blockchain.html">如何使用区块链技术进行项目开发</a></h6>
+              <span>二月 9, 2017</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/archives/12-infoq-tech-shares.html">InfoQ中国技术开放日-上海站-链上金融</a></h6>
+              <span>十二月 17, 2016</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/archives/10-from-Paxos-to-PBFT.html">从Paxos到拜占庭容错，兼谈区块链的共识协议</a></h6>
+              <span>八月 3, 2016</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/archives/09-bitcoin-serialize-class-CDataStream.html">有关比特币Core源码CDataStream类的有趣问题</a></h6>
+              <span>八月 2, 2016</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/archives/08-on-limitation-of-private-chain.html">论联盟链局限性与公有链</a></h6>
+              <span>六月 23, 2016</span>
+            </div>
+
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/代码/">代码</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发/">开发</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/概念/">概念</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/理论/">理论</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资料/">资料</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目/">项目</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链/">区块链</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-入门/">区块链 入门</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-入门-比特币/">区块链 入门 比特币</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链服务/">区块链服务</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/区块链/" style="font-size: 15px;">区块链</a> <a href="/tags/区块链-入门/" style="font-size: 20px;">区块链 入门</a> <a href="/tags/区块链-入门-比特币/" style="font-size: 10px;">区块链 入门 比特币</a> <a href="/tags/区块链服务/" style="font-size: 10px;">区块链服务</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 blockchaindev.org All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        The New Reality <a href="https://mvs.org" target="_blank">Metaverse</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+<script src="/js/my.js"></script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
