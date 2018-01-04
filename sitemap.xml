@@ -4,7 +4,7 @@
   <url>
     <loc>http://blockchaindev.org/talk/decentralized-blockchain-applications-are-utopia.html</loc>
     
-    <lastmod>2018-01-04T09:52:11.959Z</lastmod>
+    <lastmod>2018-01-04T10:01:39.517Z</lastmod>
     
   </url>
   
@@ -58,21 +58,21 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/09-bitcoin-serialize-class-CDataStream.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blockchaindev.org/archives/10-from-Paxos-to-PBFT.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/04-build-your-own-blockchain.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/11-how-to-learning-btcsrc.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
@@ -107,13 +107,6 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/04-build-your-own-blockchain.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blockchaindev.org/archives/05-opensource-blockchain-project.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
@@ -128,7 +121,14 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/11-how-to-learning-btcsrc.html</loc>
+    <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/09-bitcoin-serialize-class-CDataStream.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
