@@ -155,6 +155,79 @@ var themeMenus = {};
         
           <section id="main">
   
+    <article id="post-archives/06-consensus-algorithm-introduction"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/archives/06-consensus-algorithm-introduction.html">浅谈区块链共识机制与分布式一致性算法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/06-consensus-algorithm-introduction.html" class="article-date">
+	  <time datetime="2016-03-16T19:44:21.000Z" itemprop="datePublished">三月 17, 2016</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            本文通过介绍传统分布式一致性算法和区块链共识模型，以及提出了一些有关两者关系的观点，让大家有个比较系统的了解。
+一、前言本文打算先提出观点。欢迎大家参与讨论。
+1. 传统分布式一致性算法和区块链共识过程的异同点相同点：
+
+Append only
+强调序列化
+少数服从多数原则
+分离覆盖的问题：即长链覆盖短链区块，多节点覆盖少数节点日志
+
+不同点：
+
+传统分布式一致性算法大多不考虑拜占庭容错(Byzanetine Paxos除外)，即假设所有节点只发生宕机、网络故障等非人为问题，并不考虑恶意节点篡改数据的问题；
+传统分布式一致性算法是面向日志（数据库）的，即更通用的情况，而区块链共识模型面向交易的，所以严格来说，传统分布式一致性算法应该处于区块链共识模型的下面一层。
+
+
+本文通过介绍传统分...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/archives/06-consensus-algorithm-introduction.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/理论/">理论</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链-入门/">区块链 入门</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-archives/11-how-to-learning-btcsrc"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -642,6 +715,18 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/talk/decentralized-blockchain-applications-are-utopia.html">区块链应用的去中心化——一个乌托邦</a></h6>
+              <span>一月 4, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/interview/what-should-CTO-think-on-blockcain.html">巴比特采访-区块链的CTO需要思考什么?</a></h6>
               <span>十一月 24, 2017</span>
             </div>
@@ -696,18 +781,6 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/archives/10-from-Paxos-to-PBFT.html">从Paxos到拜占庭容错，兼谈区块链的共识协议</a></h6>
-              <span>八月 3, 2016</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -717,7 +790,7 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/代码/">代码</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发/">开发</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/概念/">概念</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/理论/">理论</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资料/">资料</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/采访/">采访</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目/">项目</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/代码/">代码</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发/">开发</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/概念/">概念</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/理论/">理论</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/观点/">观点</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资料/">资料</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/采访/">采访</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目/">项目</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -727,7 +800,7 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链/">区块链</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-入门/">区块链 入门</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-入门-比特币/">区块链 入门 比特币</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链服务/">区块链服务</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/采访/">采访</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链/">区块链</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-入门/">区块链 入门</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-入门-比特币/">区块链 入门 比特币</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-去中心化/">区块链 去中心化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链服务/">区块链服务</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/采访/">采访</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -737,7 +810,7 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/区块链/" style="font-size: 16.67px;">区块链</a> <a href="/tags/区块链-入门/" style="font-size: 20px;">区块链 入门</a> <a href="/tags/区块链-入门-比特币/" style="font-size: 10px;">区块链 入门 比特币</a> <a href="/tags/区块链服务/" style="font-size: 13.33px;">区块链服务</a> <a href="/tags/采访/" style="font-size: 10px;">采访</a>
+      <a href="/tags/区块链/" style="font-size: 16.67px;">区块链</a> <a href="/tags/区块链-入门/" style="font-size: 20px;">区块链 入门</a> <a href="/tags/区块链-入门-比特币/" style="font-size: 10px;">区块链 入门 比特币</a> <a href="/tags/区块链-去中心化/" style="font-size: 10px;">区块链 去中心化</a> <a href="/tags/区块链服务/" style="font-size: 13.33px;">区块链服务</a> <a href="/tags/采访/" style="font-size: 10px;">采访</a>
     </div>
   </div>
 
@@ -747,7 +820,7 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -761,7 +834,7 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
 
   <div class="clearfix container">
       <div class="site-info">
-	      &copy; 2017 blockchaindev.org All Rights Reserved.
+	      &copy; 2018 blockchaindev.org All Rights Reserved.
           
             <span id="busuanzi_container_site_uv">
               本站访客数<span id="busuanzi_value_site_uv"></span>人次  
