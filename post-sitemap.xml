@@ -8,7 +8,7 @@
 
     <url>
         <loc>http://blockchaindev.org/game/mvs-block-quiz.html</loc>
-        <lastmod>2018-02-18T06:26:55.952Z</lastmod>
+        <lastmod>2018-02-18T06:32:00.412Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -39,23 +39,15 @@
     </url>
 
     <url>
-        <loc>http://blockchaindev.org/archives/02-bitcoin-and-byzantine-issue.html</loc>
-        <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
-        <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://blockchaindev.org/archives/01-blockchain-introduction.html</loc>
+        <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://blockchaindev.org/archives/02-bitcoin-and-byzantine-issue.html</loc>
         <lastmod>2017-12-16T07:35:20.922Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -71,6 +63,14 @@
     </url>
 
     <url>
+        <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
+        <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://blockchaindev.org/archives/05-opensource-blockchain-project.html</loc>
         <lastmod>2017-12-16T07:35:20.922Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -79,7 +79,7 @@
     </url>
 
     <url>
-        <loc>http://blockchaindev.org/archives/07-build-digital-asset-exchange.html</loc>
+        <loc>http://blockchaindev.org/archives/06-consensus-algorithm-introduction.html</loc>
         <lastmod>2017-12-16T07:35:20.922Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -87,7 +87,7 @@
     </url>
 
     <url>
-        <loc>http://blockchaindev.org/archives/06-consensus-algorithm-introduction.html</loc>
+        <loc>http://blockchaindev.org/archives/07-build-digital-asset-exchange.html</loc>
         <lastmod>2017-12-16T07:35:20.922Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -111,6 +111,14 @@
     </url>
 
     <url>
+        <loc>http://blockchaindev.org/archives/10-from-Paxos-to-PBFT.html</loc>
+        <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://blockchaindev.org/archives/11-how-to-learning-btcsrc.html</loc>
         <lastmod>2017-12-16T07:35:20.922Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -120,14 +128,6 @@
 
     <url>
         <loc>http://blockchaindev.org/archives/12-infoq-tech-shares.html</loc>
-        <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://blockchaindev.org/archives/10-from-Paxos-to-PBFT.html</loc>
         <lastmod>2017-12-16T07:35:20.922Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
