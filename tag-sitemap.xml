@@ -45,7 +45,14 @@
 
     <url>
         <loc>http://blockchaindev.org/tags/%E5%8C%BA%E5%9D%97%E9%93%BE-%E6%B8%B8%E6%88%8F/</loc>
-        <lastmod>2018-02-18T06:32:00.412Z</lastmod>
+        <lastmod>2018-02-18T06:45:07.651Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://blockchaindev.org/tags/%E5%8C%BA%E5%9D%97%E9%93%BE-%E9%A5%BA%E5%AD%90/</loc>
+        <lastmod>2018-02-19T13:09:15.059Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
