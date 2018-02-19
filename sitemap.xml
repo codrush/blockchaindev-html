@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blockchaindev.org/talk/dumpling-blockchan.html</loc>
+    
+    <lastmod>2018-02-19T07:52:22.926Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blockchaindev.org/game/mvs-block-quiz.html</loc>
     
     <lastmod>2018-02-18T06:45:07.651Z</lastmod>
@@ -44,20 +51,6 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/08-on-limitation-of-private-chain.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blockchaindev.org/archives/09-bitcoin-serialize-class-CDataStream.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
@@ -65,7 +58,14 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/10-from-Paxos-to-PBFT.html</loc>
+    <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/11-how-to-learning-btcsrc.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
@@ -79,14 +79,21 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/12-infoq-tech-shares.html</loc>
+    <loc>http://blockchaindev.org/archives/13-development-in-blockchain.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/13-development-in-blockchain.html</loc>
+    <loc>http://blockchaindev.org/archives/10-from-Paxos-to-PBFT.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/04-build-your-own-blockchain.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
@@ -121,13 +128,6 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/04-build-your-own-blockchain.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blockchaindev.org/archives/07-build-digital-asset-exchange.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
@@ -135,7 +135,14 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/11-how-to-learning-btcsrc.html</loc>
+    <loc>http://blockchaindev.org/archives/08-on-limitation-of-private-chain.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/12-infoq-tech-shares.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
