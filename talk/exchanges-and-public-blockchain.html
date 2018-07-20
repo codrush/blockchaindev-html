@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    <script src="/js/pace.min.js"></script>
+    <link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>漫谈公链发展(二)-交易所与公链的缠结 | 区块链技术漫谈</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="区块链" />
+  
+  
+  
+  
+  <meta name="description" content="Hello大家好，接我上一篇文章《漫谈公链发展》已经过去半年，这半年行业发展真是快啊。 比特币价格从6万多跌至4万，7月份又开始上扬，公链竞争白热化，今年似乎大家都反应过来要做公链，前两年的风头似乎被联盟链盖了过去，而两年前我也写了篇联盟链的局限性，行业的发展似乎也正印证了我的断言，于是乎现在还想干这样的事情，继续审时">
+<meta name="keywords" content="区块链">
+<meta property="og:type" content="article">
+<meta property="og:title" content="漫谈公链发展(二)-交易所与公链的缠结">
+<meta property="og:url" content="http://blockchaindev.org/talk/exchanges-and-public-blockchain.html">
+<meta property="og:site_name" content="区块链技术漫谈">
+<meta property="og:description" content="Hello大家好，接我上一篇文章《漫谈公链发展》已经过去半年，这半年行业发展真是快啊。 比特币价格从6万多跌至4万，7月份又开始上扬，公链竞争白热化，今年似乎大家都反应过来要做公链，前两年的风头似乎被联盟链盖了过去，而两年前我也写了篇联盟链的局限性，行业的发展似乎也正印证了我的断言，于是乎现在还想干这样的事情，继续审时度势进行判断。 虽然现在热门前沿集中在的sharding（分片）和cross-c">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-07-20T07:21:53.955Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="漫谈公链发展(二)-交易所与公链的缠结">
+<meta name="twitter:description" content="Hello大家好，接我上一篇文章《漫谈公链发展》已经过去半年，这半年行业发展真是快啊。 比特币价格从6万多跌至4万，7月份又开始上扬，公链竞争白热化，今年似乎大家都反应过来要做公链，前两年的风头似乎被联盟链盖了过去，而两年前我也写了篇联盟链的局限性，行业的发展似乎也正印证了我的断言，于是乎现在还想干这样的事情，继续审时度势进行判断。 虽然现在热门前沿集中在的sharding（分片）和cross-c">
+  
+    <link rel="alternate" href="/atom.xml" title="区块链技术漫谈" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/my.css">
+
+</head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "首页"; 
+
+  themeMenus["/archives"] = "归档"; 
+
+  themeMenus["/tags"] = "标签"; 
+
+  themeMenus["/about"] = "关于"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="区块链技术漫谈" rel="home"> 区块链技术漫谈 </a>
+            
+          </h1>
+
+          
+            <div class="site-description">一个区块链概念普及、区块链技术分享的专栏</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/Jingxuan013.jpg".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-talk/exchanges-and-public-blockchain" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      漫谈公链发展(二)-交易所与公链的缠结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/talk/exchanges-and-public-blockchain.html" class="article-date">
+	  <time datetime="2018-07-19T08:44:21.000Z" itemprop="datePublished">七月 19, 2018</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hello大家好，接我上一篇文章《漫谈公链发展》已经过去半年，这半年行业发展真是快啊。</p>
+<p>比特币价格从6万多跌至4万，7月份又开始上扬，公链竞争白热化，今年似乎大家都反应过来要做公链，前两年的风头似乎被联盟链盖了过去，而两年前我也写了篇联盟链的局限性，行业的发展似乎也正印证了我的断言，于是乎现在还想干这样的事情，继续审时度势进行判断。</p>
+<p>虽然现在热门前沿集中在的sharding（分片）和cross-chain（跨链）,但我这篇文章主要讲述交易所和公链的相互关系，技术的迭代周期往往不及产品的迭代周期，讨论交易所和公链的关系，我认为是目前认识行业发展最关键的一步，所以暂不讨论技术前沿。</p>
+<h2 id="交易所与公链的关系"><a href="#交易所与公链的关系" class="headerlink" title="交易所与公链的关系"></a>交易所与公链的关系</h2><p>我的系列文章一直强调代币标准的重要性，而不是某一个代币，标准意味着可被复制，只有可被复制的产品才可以形成生态。</p>
+<p>这些公链有比特币上的Omini协议、以太坊ERC20代币标准、元界的MST代币标准。实际上由于1C0的兴起于2017年中，ERC20代币标准发展较早，已经成为事实意义上的行业代币标准。</p>
+<p>由于代币标准的存在，交易所的上币速度可以提升数十倍，而上币是交易所生态和盈利的主要手段之一，所以我早在年初的文章中也断言过，具有代币标准的公链将会是最后的赢家，而只做垂直生态的公链很容易被其他生态更强的公链“吃掉”。毫不客气地说，如果各位是价值投资，看到垂直生态的公链就可以绕着走了，迟早被“吃掉”，这里的吃掉有两层含义，第一是主动把用户迁移到其他公链上，放弃自己的公链（基础设施）。另外一层含义是被竞品替代掉，而竞品刚好选择的是其他生态更强的公链。有人可能会提跨链，现阶段跨链最强的就是交易所，后面我们会讲。</p>
+<p>那么成为丰富生态的公链必要条件就是包含一个通用代币标准，无论这个代币标准是同质（ERC20、MST）还是非同质的（ERC721、MIT），总之一定得有。</p>
+<p>话又说回来，一个交易所其实只需要支持若干个代币标准的公链即可，而并不需要那么多独立公链。这是软件工程特性决定的，如果同样的人力输入，使用具有代币标准的公链的产出将会单币种公链的数十倍。作为交易所，没有理由选择对接独立的单一币种公链，这个时候就会选择提高上币费，提高上币门槛，随之而来的问题是独立公链的开发门槛更高，运营门槛也更高，高到一定程度，如果我能选择一个既存的公链完成应用，那么就没有必要开发属于自己的公链了。</p>
+<p>以上分析会带来一个供需变化，如果因为代币标准的存在，交易所的运营能力大幅增强，那么新项目就会如春笋般冒出，2017年以前具有稳定运营能力的交易所十分稀有，代币标准的出现降低了技术门槛，提升了运营能力，这样就会出现大量新交易所。</p>
+<p>大量的新交易所并没有彻底改变供需，我认为的正常供需是一个交易所是可以吸纳成千上万个token，做的好的话，十万百万数量的token也是可以的。但现在并没有出现这样的情况，看起来依然是交易所不够用，但实际上新开的交易所确实很多呀，这中间到底错了什么呢？</p>
+<p>首先这些交易所还处于搭建框架和基础设施的状态，然后设计比特币以及以太币的交易对，对接若干个独立公链，然后再处理一些所谓的TOPxx的主流代币。换句话说，就是TM上币速度太慢了，TOPxx又怎么样呢，该淘汰淘汰，用上币这件事把一些不行的币赶紧淘汰掉。</p>
+<p>再换言之，虽然开了大量新交易所，但是这些交易所还是在处理一些所谓的“主流数字货币”，并没有人真正审视上币速度的重要性，甚至某些交易所还出现了上币排期的事情，我就觉得奇怪，逼着运营和技术把上币速度提起来，整个区块链行业的发展速度将提升许多倍。</p>
+<p>某些主流数字货币之间的交易对不做其实也是没有关系的，运营能力弱的只做比特币、以太币，然后只接若干代币标准的公链，大量接新项目，快速上币快速淘汰为主，这会是以后交易所的一个常态。总之，上币速度慢的交易所，首先就会被淘汰掉。</p>
+<p>为什么说快速上币、快速淘汰好呢，这就涉及到下面一个话题。</p>
+<h2 id="区块链与互联网运营的关系"><a href="#区块链与互联网运营的关系" class="headerlink" title="区块链与互联网运营的关系"></a>区块链与互联网运营的关系</h2><p>首先要再次重申我的观点，DAPP根本就是伪需求，不存在DAPP，只有互联网服务。</p>
+<p>互联网运营始终是贯穿区块链发展生命周期的，所有财经类网站、行情APP、交易所几乎清一色互联网网络服务的范畴，别跟我扯什么DAPP，有DAPP没有互联网式的运营手段，靠自然流量吃饭？只要中心化的运营手段存在，DAPP似乎还很遥远，除非人工智能、实体机器人可以绝对替代人类劳动。</p>
+<p>另外一个观点是我认为现在的互联网运营手段已经到了一个天花板，区块链token经济的加入，将会成指数级提高互联网运管能力的上限，尤其是流量变现的能力，别再什么广告流量变现、会员流量变现，太古老了，全部淘汰，全部token经济一站式到底，区块链数字经济将会给互联网来一次彻底大换血，大升级。</p>
+<p>目前区块链领域的第一个数据挖掘的例子就是“空投”，但这也太粗暴了，粗暴到挖掘的维度单一到只有持币量，这要是放到一个推荐系统中，SVM都没法填。。。</p>
+<p>所以也被看到什么人工智能与区块链的项目就脑子一热，我不觉得区块链本身与人工智能有啥要结合的，而是人工智能的一些算法应用到区块链账本之上领域，会比较可行。</p>
+<p>既然互联网运营需要大量的token，那么这么少的交易所完全不够用啊，怎么办呢，看谁上币快咯~</p>
+<h2 id="交易所的垂直化"><a href="#交易所的垂直化" class="headerlink" title="交易所的垂直化"></a>交易所的垂直化</h2><p>最后一个话题叫做垂直化。前面说的代币标准和上币速度决定了区块链行业的发展速度。那么发展的一个阶段性形态是什么呢？</p>
+<p>就是交易所的垂直化。我们一直盼着公链的应用落地，其实忘记了一件事情，就是解决公链应用的融资和上市问题，这两个都是通过交易所完成的，换句话说，公链应用的落地首先是在交易所完成的。</p>
+<p>交易所一直面临一个严峻的问题，就是用户粘性的问题，形成稳定用户粘性的难度其实比拉新的难度要高，那么交易所就一定要垂直化，以上就是交易所会有偏向性地渗透到某个垂直领域，例如文娱、数字版权保护、物流。将实实在在的领域内的服务转化为交易所的价值锚定对象，那么交易所的流量和用户粘性将会固定。</p>
+<p>所以交易所和公链放一起做， 才是区块链数字经济（也就通证经济）的阶段性终局。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/观点/">观点</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+
+      
+        <div id="donation_div"></div>
+
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: '打赏支持', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/wechat-ch.png',
+  alipayImage: 'http://mvs-articles.oss-cn-hangzhou.aliyuncs.com/alipay-ch.png'
+});
+</script>
+      
+            
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/talk/dumpling-blockchan.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">漫谈公链发展</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#交易所与公链的关系"><span class="nav-number">1.</span> <span class="nav-text">交易所与公链的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区块链与互联网运营的关系"><span class="nav-number">2.</span> <span class="nav-text">区块链与互联网运营的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交易所的垂直化"><span class="nav-number">3.</span> <span class="nav-text">交易所的垂直化</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2018 区块链技术漫谈 All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        The New Reality <a href="https://mvs.org" target="_blank">Metaverse</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+<script src="/js/my.js"></script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
