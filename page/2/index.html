@@ -155,6 +155,65 @@ var themeMenus = {};
         
           <section id="main">
   
+    <article id="post-archives/10-from-Paxos-to-PBFT"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/archives/10-from-Paxos-to-PBFT.html">从Paxos到拜占庭容错，兼谈区块链的共识协议</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/archives/10-from-Paxos-to-PBFT.html" class="article-date">
+	  <time datetime="2016-08-03T02:24:21.000Z" itemprop="datePublished">八月 3, 2016</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            这是一篇转载文章，原文地址，原文作者data-geek已授权转载。本文建立在在很多论文的基础上，概括得非常好，比我的《浅谈区块链共识机制与分布式一致性算法》更深度。
+高可用架构在分布式系统设计中是最核心的挑战之一，拜占庭容错则是解决高效容错问题的通用方案。拜占庭系统来源于拜占庭将军问题，在古代，一些拜占庭的将军率领他们的部队要攻占敌人的一个城池, 每个将军只能控制他们自己的部队并且通过信使传递消息给其他的将军(这条消息只有参与的两个将军知道，其他的将军可以打听，但是不能验证消息的正确性)。如果这些将军中有些是来自敌方的奸细，那么如何使忠诚的将军仍然可以达成行动协议而不受奸细的挑拨，就是拜占庭将军问题。分布式系统的每一个节点可以类比成将军，服务器之间的消息传递可以类比成信使，服务器可能会...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/archives/10-from-Paxos-to-PBFT.html#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/理论/">理论</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-archives/09-bitcoin-serialize-class-CDataStream"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -748,78 +807,11 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
 <!-- Table of Contents -->
 
   
-    <article id="post-archives/01-blockchain-introduction"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/archives/01-blockchain-introduction.html">区块链(Blockchain)深入介绍</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/archives/01-blockchain-introduction.html" class="article-date">
-	  <time datetime="2015-12-14T15:44:21.000Z" itemprop="datePublished">十二月 14, 2015</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-
-          
-            <div class="entry-summary" style="margin-left:0;">
-            一、区块链是什么？区块链是一个公共的分布式总账，任何发生在此区块链网络上的交易会被约定的算法记录到区块链上，且满足以下条件：
-
-存储基于分布式数据库
-数据库是区块链的数据载体，区块链是交易的业务逻辑载体
-区块链按时间序列化Block，且每个确认块是整个网络数据共识的唯一准则
-区块链只对添加有效，对其他操作无效
-基于非对称加密的公私钥验证
-记账节点要求拜占庭将军问题可解/避免
-共识过程(consensus progress)是演化稳定的，即面对一定量的不同节点的矛盾数据不会崩溃
-共识过程能够解决double-spending问题令记账（又名矿工）节点 = N，当N 公开且自由访问，则这是一条 公有链 （后面有介绍）当N 半公开仅由某个组织或团体内部使用（例如R3 CEV），外部仅可以（授...
-          
-
-        
-          <p class="article-more-link">
-            <a href="/archives/01-blockchain-introduction.html#more">阅读全文</a>
-          </p>
-        </div>
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/概念/">概念</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链-入门/">区块链 入门</a></li></ul>
-
-      
-            
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
   </nav>
 
 </section>
@@ -919,7 +911,19 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/talk/exchanges-and-public-blockchain.html">漫谈公链发展(二)-交易所与公链的缠结</a></h6>
+              <h6 style="margin: 0;"><a href="/talk/public-blockchain-priority.html">漫谈公链发展(三):漫谈公链发展(三)：公链优先原则</a></h6>
+              <span>九月 6, 2018</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/talk/exchanges-and-public-blockchain.html">漫谈公链发展(二):交易所与公链的缠结</a></h6>
               <span>七月 19, 2018</span>
             </div>
 
@@ -973,18 +977,6 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/conception/from-baas-to-value-internet.html">从区块链即服务（BaaS）到价值互联网</a></h6>
-              <span>九月 22, 2017</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -994,7 +986,7 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/代码/">代码</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发/">开发</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/概念/">概念</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/游戏/">游戏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/理论/">理论</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/观点/">观点</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资料/">资料</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/采访/">采访</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目/">项目</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/代码/">代码</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发/">开发</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/概念/">概念</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/游戏/">游戏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/理论/">理论</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/观点/">观点</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资料/">资料</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/采访/">采访</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目/">项目</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -1004,7 +996,7 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链/">区块链</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-入门/">区块链 入门</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-入门-比特币/">区块链 入门 比特币</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-去中心化/">区块链 去中心化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-游戏/">区块链 游戏</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-饺子/">区块链 饺子</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链服务/">区块链服务</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/采访/">采访</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链/">区块链</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-入门/">区块链 入门</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-入门-比特币/">区块链 入门 比特币</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-去中心化/">区块链 去中心化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-游戏/">区块链 游戏</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链-饺子/">区块链 饺子</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区块链服务/">区块链服务</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/采访/">采访</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -1014,7 +1006,7 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/区块链/" style="font-size: 16.67px;">区块链</a> <a href="/tags/区块链-入门/" style="font-size: 20px;">区块链 入门</a> <a href="/tags/区块链-入门-比特币/" style="font-size: 10px;">区块链 入门 比特币</a> <a href="/tags/区块链-去中心化/" style="font-size: 10px;">区块链 去中心化</a> <a href="/tags/区块链-游戏/" style="font-size: 10px;">区块链 游戏</a> <a href="/tags/区块链-饺子/" style="font-size: 10px;">区块链 饺子</a> <a href="/tags/区块链服务/" style="font-size: 13.33px;">区块链服务</a> <a href="/tags/采访/" style="font-size: 10px;">采访</a>
+      <a href="/tags/区块链/" style="font-size: 20px;">区块链</a> <a href="/tags/区块链-入门/" style="font-size: 20px;">区块链 入门</a> <a href="/tags/区块链-入门-比特币/" style="font-size: 10px;">区块链 入门 比特币</a> <a href="/tags/区块链-去中心化/" style="font-size: 10px;">区块链 去中心化</a> <a href="/tags/区块链-游戏/" style="font-size: 10px;">区块链 游戏</a> <a href="/tags/区块链-饺子/" style="font-size: 10px;">区块链 饺子</a> <a href="/tags/区块链服务/" style="font-size: 15px;">区块链服务</a> <a href="/tags/采访/" style="font-size: 10px;">采访</a>
     </div>
   </div>
 
@@ -1024,7 +1016,7 @@ secp256k1 库已经被包含，由于secp256k1库更新较快，必须match指�
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
