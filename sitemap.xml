@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blockchaindev.org/talk/public-blockchain-priority.html</loc>
+    
+    <lastmod>2018-09-05T16:35:06.587Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blockchaindev.org/talk/exchanges-and-public-blockchain.html</loc>
     
-    <lastmod>2018-09-05T16:32:05.694Z</lastmod>
+    <lastmod>2018-09-05T16:33:56.316Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://blockchaindev.org/talk/decentralized-blockchain-applications-are-utopia.html</loc>
     
     <lastmod>2018-09-05T16:31:36.322Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/talk/public-blockchain-priority.html</loc>
-    
-    <lastmod>2018-09-05T16:27:29.742Z</lastmod>
     
   </url>
   
