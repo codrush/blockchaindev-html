@@ -172,21 +172,27 @@ var themeMenus = {};
     <div class="article-meta">
       
 	Posted on <a href="/talk/2018-recap.html" class="article-date">
-	  <time datetime="2018-09-06T08:44:21.000Z" itemprop="datePublished">九月 6, 2018</time>
+	  <time datetime="2019-01-07T12:44:21.000Z" itemprop="datePublished">一月 7, 2019</time>
 	</a>
 
       
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="0x01-前言"><a href="#0x01-前言" class="headerlink" title="0x01 前言"></a>0x01 前言</h2><p>近日发生很多事，为了填前员工挖下的坑，我和运维部的同事通宵加班接近36小时两次，进行了深入多次调查以后讲了些大实话反倒遭受了很多人的非议。于是写篇文章记录下来，也算是对自己的警醒，2018年学到了很多，尤其是体会了高层管理和中层管理两种完全两种不同的思维模式。<br>首先解释公司的组织架构，母公司维优有多块区块链业务，包含数字资产交易业务和区块链公链研发业务。我从2016年开始管理维优的技术团队，直至2018年人员快速扩张，业务快速发展，管理层考虑到我个人的精力和能力无法同时覆盖两个大项目，决定将交易业务交给某位职业经理人S，所以2018年我的大部分精力都放在元界和运营上，直至12月份人员优化以后所有技术才由我管理。<br>以上是背景。</p>
-<h2 id="0x02-上半年"><a href="#0x02-上半年" class="headerlink" title="0x02 上半年"></a>0x02 上半年</h2><p>S大约从2018年3月开始接手，交易部门的招聘工作也由S负责。S算是我的前辈，为人务实稳重，打算以敏捷开发的模式来管理项目。我对S也算是十分信任，既然有人接手我自然不必太过插手。但是我和S约定了一条，关于交易撮合部分的代码，也就是hft_exchange不必替换，因为至少交易逻辑是可以得到保证的，S说除了交易部分其他全换Java，我说好。<br>S的管理工作有条不紊，按部就班，但坏就坏在S和人事在招聘工作上的崩坏。在我的管理期间，一直以向上招聘为目的，也就是我招聘的人一定要比我强，无论是技术还是沟通能力，只要有一方面比我强就行。而S可能受大公司的影响有点深，没有转变为我们这种小公司的思路，开始招聘了大量非区块链行业的从业人员，水平也层次不齐。<br>这无形中给公司增加了很多培训成本，在币圈的各位都知道，币圈是有信仰的，无论是投机还是投资，比特币以太坊至少都会持有的。只要买过比特币以太坊，那么至少对我们要做的业务算是有个基本认识。可惜但是这波新进来的人偏偏没有（我也是后来才知），新人不知比特币以太坊，也不买这些东西，觉得这东西没有国家信用背书，这些玩意就是骗人的。<br>那么问题来了，请问这会发生什么？我至今还在给他们擦屁股！我且不说技术水平，对币圈和数字资产无所谓的态度，虽然人一直在写代码，但是产品的可用性和易用性十分糟糕。<br>举个例子，新人员居然连UTXO和Account based 的区别都不知道。有人可能觉得这算什么问题，可是你想想如果不了解这两者的本质区别，你的代码势必多出相当多的冗余代码，而且还不一定对。<br>本着耐心友好的原则，那就培训吧。随着培训工作的展开，我才知道这种无所谓的态度才是致命伤，这并不是技术水平的问题，要知道我们是一个金融公司，任何的差池都会导致资金的损失，至今公司因为某些代码质量不合格遭受了大量损失。</p>
-<h2 id="0x03-下半年"><a href="#0x03-下半年" class="headerlink" title="0x03 下半年"></a>0x03 下半年</h2><p>2018年6月份，S离职了（在这里我还是非常感谢S所做的贡献）。公司管理层提议维优旗下另外一位技术总监来接手交易业务的技术部门，我们称之为T吧。T是一个很nice的人，管理和技术水平都颇受大家认可，自己手上也有一个10人左右的小团队。考虑到我的核心任务仍然是元界发展，所以也就同意了。<br>由于交易业务交给了T，那么我从2018年7月份开始，我个人开始了空中飞人之旅，代表元界参加各种会议，北京、旧金山、东京、杭州到处跑，稍微能有点影响力的会议我都选择了参加，这段时间的活动的信息大家可以从元界的公众号上获取，有照片为证。<br>虽然到处飞，但我只要在公司，我还会看看交易技术研发的项目进展，新团队也进入了全新的开发阶段，这段时间他们最终还是进行了完全重构，把所有老系统都推翻重来了，我当时说你们何来勇气推翻重来。<br>由于交易技术中一块最重要的就是API交易，这时候我听到客户频繁反馈API交易动，最终调查结果是说是API 部分无法支撑海量的调用，我当时心想照着墨菲定律完蛋了。技术方案讨论了几个月，最终说是修完了，结果修完数据的完整性出了问题，经常核心业务数据对不上，这个问题直到上周才修掉。<br>而且我还看到不少员工上班玩游戏的现象。午休时间打王者荣耀也就算了，某些员工甚至将任天堂插在工作用的显示器上。就这个问题我还在管理例会上提出，希望大家玩游戏可以光明正大地玩，有必要的话公司可以掏钱买PS4给大家玩，但前提是请把交易业务的技术弄弄好。那么问题来了，现象有好转吗？并没有。明着玩变成暗着玩，我几次路过看到某些人迅速切换手机屏幕。</p>
+        <h2 id="0x01-前言"><a href="#0x01-前言" class="headerlink" title="0x01 前言"></a>0x01 前言</h2><p>近日发生很多事，为了填前员工挖下的坑，我和运维部的同事通宵加班接近36小时两次，进行了深入多次调查以后讲了些大实话反倒遭受了很多人的非议。于是写篇文章记录下来，也算是对自己的警醒，2018年学到了很多，尤其是体会了高层管理和中层管理两种完全两种不同的思维模式。</p>
+<p>首先解释公司的组织架构，母公司维优有多块区块链业务，包含数字资产交易业务和区块链公链研发业务。我从2016年开始管理维优的技术团队，直至2018年人员快速扩张，业务快速发展，管理层考虑到我个人的精力和能力无法同时覆盖两个大项目，决定将交易业务交给某位职业经理人S，所以2018年我的大部分精力都放在元界和运营上，直至12月份人员优化以后所有技术才由我管理。<br>以上是背景。</p>
+<h2 id="0x02-上半年"><a href="#0x02-上半年" class="headerlink" title="0x02 上半年"></a>0x02 上半年</h2><p>S大约从2018年3月开始接手，交易部门的招聘工作也由S负责。S算是我的前辈，为人务实稳重，打算以敏捷开发的模式来管理项目。我对S也算是十分信任，既然有人接手我自然不必太过插手。但是我和S约定了一条，关于交易撮合部分的代码，也就是hft_exchange不必替换，因为至少交易逻辑是可以得到保证的，S说除了交易部分其他全换Java，我说好。</p>
+<p>S的管理工作有条不紊，按部就班，但坏就坏在S和人事在招聘工作上的崩坏。在我的管理期间，一直以向上招聘为目的，也就是我招聘的人一定要比我强，无论是技术还是沟通能力，只要有一方面比我强就行。而S可能受大公司的影响有点深，没有转变为我们这种小公司的思路，开始招聘了大量非区块链行业的从业人员，水平也层次不齐。<br>这无形中给公司增加了很多培训成本，在币圈的各位都知道，币圈是有信仰的，无论是投机还是投资，比特币以太坊至少都会持有的。只要买过比特币以太坊，那么至少对我们要做的业务算是有个基本认识。可惜但是这波新进来的人偏偏没有（我也是后来才知），新人不知比特币以太坊，也不买这些东西，觉得这东西没有国家信用背书，这些玩意就是骗人的。</p>
+<p>那么问题来了，请问这会发生什么？我至今还在给他们擦屁股！我且不说技术水平，对币圈和数字资产无所谓的态度，虽然人一直在写代码，但是产品的可用性和易用性十分糟糕。</p>
+<p>举个例子，新人员居然连UTXO和Account based 的区别都不知道。有人可能觉得这算什么问题，可是你想想如果不了解这两者的本质区别，你的代码势必多出相当多的冗余代码，而且还不一定对。</p>
+<p>本着耐心友好的原则，那就培训吧。随着培训工作的展开，我才知道这种无所谓的态度才是致命伤，这并不是技术水平的问题，要知道我们是一个金融公司，任何的差池都会导致资金的损失，至今公司因为某些代码质量不合格遭受了大量损失。</p>
+<h2 id="0x03-下半年"><a href="#0x03-下半年" class="headerlink" title="0x03 下半年"></a>0x03 下半年</h2><p>2018年6月份，S离职了（在这里我还是非常感谢S所做的贡献）。公司管理层提议维优旗下另外一位技术总监来接手交易业务的技术部门，我们称之为T吧。T是一个很nice的人，管理和技术水平都颇受大家认可，自己手上也有一个10人左右的小团队。考虑到我的核心任务仍然是元界发展，所以也就同意了。</p>
+<p>由于交易业务交给了T(也感谢T的辛苦付出)，那么我从2018年7月份开始，我个人开始了空中飞人之旅，代表元界参加各种会议，北京、旧金山、东京、杭州到处跑，稍微能有点影响力的会议我都选择了参加，这段时间的活动的信息大家可以从元界的公众号上获取，有照片为证。</p>
+<p>虽然到处飞，但我只要在公司，我还会看看交易技术研发的项目进展，新团队也进入了全新的开发阶段，这段时间他们最终还是进行了完全重构，把所有老系统都推翻重来了，我当时说你们何来勇气推翻重来。</p>
+<p>由于交易技术中一块最重要的就是API交易，这时候我听到客户频繁反馈API交易动，最终调查结果是说是API 部分无法支撑海量的调用，我当时心想照着墨菲定律完蛋了。技术方案讨论了几个月，最终说是修完了，结果修完数据的完整性出了问题，经常核心业务数据对不上，这个问题直到上周才修掉。<br>而且我还看到不少员工上班玩游戏的现象。午休时间打王者荣耀也就算了，某些员工甚至将任天堂插在工作用的显示器上。就这个问题我还在管理例会上提出，希望大家玩游戏可以光明正大地玩，有必要的话公司可以掏钱买PS4给大家玩，但前提是请把交易业务的技术弄弄好。那么问题来了，现象有好转吗？并没有。明着玩变成暗着玩，我几次路过看到某些人迅速切换手机屏幕。</p>
 <p>更有甚者，某个员工连DNS的类型都搞不清楚，却狂妄自大得过分。我某次过来分析了一下架构，我说目前微服务可能不适合交易技术，立马被其喷。有段话我只发了朋友圈，并不想公开发表，但鉴于某些离职的狂妄员工，我只能摆开了说了：</p>
 <blockquote>
-<blockquote>
 <p>自上个月接手一个线上项目，刷新了我的认知。且不说什么是微服务，我拿到手之前所有人告诉我是微服务架构，直到我看到了厚重的kafka挂了一堆模块，这可能颠覆了我对微服务的认知，本应该聚合的功能被拆成三四个服务，导致核心数据的一致性和完整性得不到保证，在稍微高点的负载测试情况下，频繁出现业务数据不一致，具体表现为订单关联的数据前后不一致，甚至有客户反馈自己的订单数据前后莫名其妙变化对不上。我一想我可能遇到了假的微服务，那么没关系，我从数据库开始抓，先保证数据最终一致再说。直到我看到了表字段一堆before after，心麻凉麻凉的，这可能只是一堆增删改的日志，业务数据的前后依赖只能从代码分析，数据的完整性并不是从数据库层面保证的。那么好，结合log看代码吧，问题是log打印了成千成万条一模一样的SQL执行语句本身是几个意思。除此之外，也没有对应的网络拓扑图，也没有全局的模块调用和消息推送关系文档，那么据说之前两三个架构师是怎么回事？也许我从后端只能看出技术水平，那么到了产品和前端就就能看出端倪了，有用户反馈自己的账号登陆时提示账号不存在，这是重要事件要查，查完才发现不过是触发风控被屏蔽了，那么问题来了，为什么用户会说自己账户不存在？因为登陆提示就是这么写的。随即我自己体验到了下图的bug，据说长达几个月没有人修。我想了想，这和技术已经没有关系了，个中意味你们自己体会。</p>
-</blockquote>
 </blockquote>
 <p><img src="http://dlmvs1.oss-cn-hangzhou.aliyuncs.com/temp/2018-recap-01.png" alt="01"></p>
 <p>上面一段话大家可能没什么感触，这么说吧，因为业务数据不一致的问题，我们平均一天多上千个工单，这些工单的人力成本弄得好像不是工作量似的，也对，按照“我不负责我不管”的心态，反正不是他们的工作量。</p>
@@ -196,18 +202,18 @@ var themeMenus = {};
 <p><img src="http://dlmvs1.oss-cn-hangzhou.aliyuncs.com/temp/2018-recap-03.png" alt="03"></p>
 <p>根据我的经验，角色至少引用权限作为外键，非法删除时数据库会因为数据约束而自动拒绝，从这点可以看出数据的完整性并不是由数据库保证的，而是程序员自己写代码保证的，水平不错对吧？</p>
 <p><img src="http://dlmvs1.oss-cn-hangzhou.aliyuncs.com/temp/2018-recap-04.png" alt="04"></p>
-<p>还有这一堆Hard-code error message是什么意思呢？异常处理都是这么处理的吗？错误码写在注释里，错误消息硬编码写在代码里而且是中文对吗？也许是我读书少，没见过世面。</p>
+<p>还有这一堆Hard-code error message是什么意思呢？异常处理都是这么处理的吗？错误码写在注释里，错误消息硬编码写在代码里而且是中文对吗？也许是我读书少，没见过世面。(有人反馈这里Java就是这么处理的，OK，对此我说错了大家可以斧正）</p>
 <p>全局的架构图没有就算了，模块逻辑和模块的代码经常对不上，发版本靠吼，验证完全靠测试团队，单元测试框架几乎为零，就别说核心模块的单元测试覆盖率了。也许有人过工期短，做不过来，那么不好意思，工期短那么请保证业务的可用性和连续性，而不是老想着推翻重来。</p>
-<p>再说个故事，某运维嫌跳板麻烦，在所有的生产环境机器全部都挂载了公网IP，连最核心的资金系统有公网IP。某些技术嫌访问github缓慢，一致要求在公司部署IDC机房进行内部开发测试，这事我强烈反对，这都8102年了，自己部署机房玩儿呢，直到IT-Support告诉我公司买了3台2U的服务器花了十几万，2台1U还摆在公司的小角落。人员结构优化过后，我认为这些服务可以迁移至AWS，服务器可以二手卖掉。结果某些别有用心的离职员工造谣维优即将倒闭，正在变卖资产，这个我怎么说好的。</p>
+<p>再说个故事，某运维嫌跳板麻烦，在所有的生产环境机器全部都挂载了公网IP，连最核心的资金系统有公网IP。某些技术嫌访问github缓慢，一致要求在公司部署IDC机房进行内部开发测试，这事我强烈反对，这都8102年了，自己部署机房玩儿呢，直到IT-Support告诉我公司买了3台2U的服务器花了十几万，2台1U还摆在公司的小角落。人员结构优化过后，我认为这些服务可以迁移至AWS，服务器可以二手卖掉。结果某些别有用心的离职员工造谣维优即将倒闭，正在变卖资产，这个我只能说你们真机智。</p>
 <p>我当时说微服务目前不合适交易技术，是考虑到实时高并发强一致性要求的情况下，事件驱动架构模式也许是更好的选择，一味地跟风微服务，怕不是“面向简历编程”吧？退一万步，就算选了微服务，那也是在深入理解业务模型的情况下，先做拆分再做聚合，就我目前看到的现状，我知道看到了拆分，没有看到聚合，过度地拆分，太细的粒度已经引起数据完整性和一致性的问题，至于kafka，这么重的东西你打算是把血吸到消息队列上去吗？</p>
 <p>我们再来看看某些员工的职业道德问题。某些员工在离职前夕，私自下载了公司的量化交易代码，要知道量化代码的核心是量化策略，量化策略是公司高管设计出来的，代码只是载体，未授权获取量化代码相当于盗取公司资产。</p>
 <p><img src="http://dlmvs1.oss-cn-hangzhou.aliyuncs.com/temp/2018-recap-06.png" alt="06"></p>
-<p>诸如此类的问题还有，由于涉及保密信息，我这里不再透露。</p>
-<h2 id="0x04-某些报道"><a href="#0x04-某些报道" class="headerlink" title="0x04 某些报道"></a>0x04 某些报道</h2><p>我再次声明，我2018年未参与交易部门的技术管理工作，我工作的重心仍然是元界核心开发以及交易业务的运营，交易业务的技术部门由上文出现的S和T全权负责，而我个人的建议一直是早人员优化早升级，鉴于种种原因没有施行也是要照顾S和T的想法，这里说我管理能力不足我认了。</p>
+<p>诸如此类的问题还有，在离职潮之后公司部分数字资产失窃。考虑到离职员工的声誉问题，我们打算调查清楚再寻求警方帮助，由于涉及保密信息，我这里不再透露。</p>
+<h2 id="0x04-某些报道"><a href="#0x04-某些报道" class="headerlink" title="0x04 某些报道"></a>0x04 某些报道</h2><p>很多人质疑我作为CTO为什么不采取管理手段？技术出了问题我CTO应该为此担责。话没错，代码管理不力这个我姑且认下来。但是有一点，交易业务的人事管理和招聘工作我完全被HR排除在外，我不知道这是别有用心还是怎么回事。<br>但出于对S和T的信任（S和T的资历和年龄都比我大），所以我并未直接参与人事和项目管理。所以我再次声明，我2018年未参与交易部门的技术管理工作，我工作的重心仍然是元界核心开发以及运营业务，我个人的建议一直是人员早优化早升级，鉴于种种原因没有施行也是要照顾S和T的想法，这里说我管理能力不足我也认了，为此我吸取教训。</p>
 <p><img src="http://dlmvs1.oss-cn-hangzhou.aliyuncs.com/temp/2018-recap-07.png" alt="07"></p>
-<p><img src="http://dlmvs1.oss-cn-hangzhou.aliyuncs.com/temp/2018-recap-08.png" alt="08"><br>我从来没有认为我是区块链的名人，我所做一切不过是希望元界更上一层楼，希望国内的区块链行业更好。不好意思，我觉得3000 TPS一般，而且我也没看出内部斗争，B姓高管四大出身，一心想做好实施，使出全力来推动项目，说你们上班玩游戏还被你们解释为斗争，也是有勇气。<br>而且我也不明白，我出了本《区块链第一课》怎么也成了喷点，你们这脑补能力也是可以。你要是说我书写得烂可以，书哪里写得不好请你可以站出来打脸，不好就是不好我可以认，但是说我“技术烂也能成个名人”，这帽子扣得真莫名其妙，是想表达我陈浩沽名钓誉吗？对不起，那可能是你的想法，和我陈浩无关。</p>
-<p>最后我不想谈技术问题了，诸位看官要是觉得我是因为离职员工技术菜才采取行动，那可是太天真了，职业道德和素养以及工作的态度问题，才是触及我的最后底线，我也不想罗生门，孰是孰非各位看官可以自己判断。</p>
-<p>最后，某些狂妄的人想评价我不懂技术可以，我个人github在这里：<a href="https://github.com/betachen" target="_blank" rel="noopener">https://github.com/betachen</a> ，欢迎来战，不过我还是奉劝先弄懂UTXO和ERC20再来说话。</p>
+<p><img src="http://dlmvs1.oss-cn-hangzhou.aliyuncs.com/temp/2018-recap-08.png" alt="08"><br>我从来没有认为我是区块链的名人，我所做一切不过是希望元界更上一层楼，希望国内的区块链行业更好。不好意思，我觉得3000 TPS真不高，而且我也没看出内部斗争，B高管四大出身，一心想做好项目，使出全力来推动，说你们上班玩游戏还被你们解释为斗争，也是有勇气。</p>
+<p>而且我也不明白，我出了本《区块链第一课》怎么也成了喷点，你们这脑补能力也是可以。你要是说我书写得烂可以，书哪里写得不好请你可以站出来打脸，但是恶意揣测说我“技术烂也能成个名人”，这帽子扣得真莫名其妙，是想表达我陈浩沽名钓誉吗？对不起，那可能是你的想法，和我陈浩无关。</p>
+<p>最后我不想谈技术问题了，聊下来其实都是态度问题，工作推一步走一步，这个我不负责我不管的思维模式。诸位看官要是觉得我是因为离职员工技术菜才采取行动，那可是太天真了，职业道德和素养以及工作的态度问题，才是触及我的最后底线，我也不想罗生门，孰是孰非各位可以自己判断。最后，某些狂妄的人想评价我不懂技术可以，我个人github在这里：<a href="https://github.com/betachen" target="_blank" rel="noopener">https://github.com/betachen</a> ，欢迎来战，不过我还是奉劝先弄懂UTXO和ERC20再来说话。</p>
 
       
     </div>
@@ -899,7 +905,7 @@ var themeMenus = {};
             
 
               <h6 style="margin: 0;"><a href="/talk/2018-recap.html">一个90后区块链技术管理者的自白</a></h6>
-              <span>九月 6, 2018</span>
+              <span>一月 7, 2019</span>
             </div>
 
           </li>
@@ -1003,7 +1009,7 @@ var themeMenus = {};
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
