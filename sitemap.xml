@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blockchaindev.org/talk/public-blockchain-priority.html</loc>
+    <loc>http://blockchaindev.org/talk/2018-recap.html</loc>
     
-    <lastmod>2018-09-05T16:35:06.587Z</lastmod>
+    <lastmod>2019-01-07T12:58:55.254Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blockchaindev.org/talk/exchanges-and-public-blockchain.html</loc>
     
-    <lastmod>2018-09-05T16:33:56.316Z</lastmod>
+    <lastmod>2018-09-05T16:39:53.954Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/talk/public-blockchain-priority.html</loc>
+    
+    <lastmod>2018-09-05T16:35:06.587Z</lastmod>
     
   </url>
   
@@ -65,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/10-from-Paxos-to-PBFT.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blockchaindev.org/archives/11-how-to-learning-btcsrc.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
@@ -79,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/02-bitcoin-and-byzantine-issue.html</loc>
+    <loc>http://blockchaindev.org/archives/12-infoq-tech-shares.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/13-development-in-blockchain.html</loc>
+    <loc>http://blockchaindev.org/archives/02-bitcoin-and-byzantine-issue.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
+    <loc>http://blockchaindev.org/archives/04-build-your-own-blockchain.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/04-build-your-own-blockchain.html</loc>
+    <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
@@ -156,7 +156,14 @@
   </url>
   
   <url>
-    <loc>http://blockchaindev.org/archives/12-infoq-tech-shares.html</loc>
+    <loc>http://blockchaindev.org/archives/10-from-Paxos-to-PBFT.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/13-development-in-blockchain.html</loc>
     
     <lastmod>2017-12-16T07:35:20.922Z</lastmod>
     
