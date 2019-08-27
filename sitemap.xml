@@ -2,170 +2,163 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blockchaindev.org/talk/2018-recap.html</loc>
-    
-    <lastmod>2019-01-07T15:09:10.782Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blockchaindev.org/talk/exchanges-and-public-blockchain.html</loc>
     
-    <lastmod>2018-09-05T16:39:53.954Z</lastmod>
+    <lastmod>2018-09-05T16:39:53.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blockchaindev.org/talk/public-blockchain-priority.html</loc>
     
-    <lastmod>2018-09-05T16:35:06.587Z</lastmod>
+    <lastmod>2018-09-05T16:35:06.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blockchaindev.org/talk/dumpling-blockchan.html</loc>
     
-    <lastmod>2018-09-05T16:31:50.222Z</lastmod>
+    <lastmod>2018-09-05T16:31:50.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blockchaindev.org/talk/decentralized-blockchain-applications-are-utopia.html</loc>
     
-    <lastmod>2018-09-05T16:31:36.322Z</lastmod>
+    <lastmod>2018-09-05T16:31:36.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blockchaindev.org/game/mvs-block-quiz.html</loc>
     
-    <lastmod>2018-03-18T07:44:00.849Z</lastmod>
+    <lastmod>2018-03-18T07:44:00.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blockchaindev.org/interview/what-should-CTO-think-on-blockcain.html</loc>
     
-    <lastmod>2017-12-16T08:37:31.260Z</lastmod>
+    <lastmod>2017-12-16T08:37:31.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blockchaindev.org/conception/from-baas-to-value-internet.html</loc>
     
-    <lastmod>2017-12-16T08:36:09.584Z</lastmod>
+    <lastmod>2017-12-16T08:36:09.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blockchaindev.org/about/index.html</loc>
     
-    <lastmod>2017-12-16T08:08:19.035Z</lastmod>
+    <lastmod>2017-12-16T08:08:19.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blockchaindev.org/tags/index.html</loc>
     
-    <lastmod>2017-12-16T08:04:21.058Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/11-how-to-learning-btcsrc.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/12-infoq-tech-shares.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/02-bitcoin-and-byzantine-issue.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/conception/conceptions-on-BAAS.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/01-blockchain-introduction.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/04-build-your-own-blockchain.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/05-opensource-blockchain-project.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/06-consensus-algorithm-introduction.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/07-build-digital-asset-exchange.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/08-on-limitation-of-private-chain.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blockchaindev.org/archives/09-bitcoin-serialize-class-CDataStream.html</loc>
-    
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    <lastmod>2017-12-16T08:04:21.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blockchaindev.org/archives/10-from-Paxos-to-PBFT.html</loc>
     
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/11-how-to-learning-btcsrc.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/02-bitcoin-and-byzantine-issue.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://blockchaindev.org/archives/13-development-in-blockchain.html</loc>
     
-    <lastmod>2017-12-16T07:35:20.922Z</lastmod>
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/01-blockchain-introduction.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/conception/conceptions-on-BAAS.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/05-opensource-blockchain-project.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/04-build-your-own-blockchain.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/03-architecture-of-value-internet.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/08-on-limitation-of-private-chain.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/06-consensus-algorithm-introduction.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/07-build-digital-asset-exchange.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/09-bitcoin-serialize-class-CDataStream.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blockchaindev.org/archives/12-infoq-tech-shares.html</loc>
+    
+    <lastmod>2017-12-16T07:35:20.000Z</lastmod>
     
   </url>
   
